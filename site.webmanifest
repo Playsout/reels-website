@@ -1,0 +1,17 @@
+{
+  "name": "ReelsBuddy",
+  "short_name": "ReelsBuddy",
+  "description": "An AI video studio for individuals.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111210",
+  "theme_color": "#111210",
+  "icons": [
+    {
+      "src": "/assets/reelsbuddy-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

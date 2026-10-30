@@ -1,0 +1,2387 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/manrope-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #111210;
+}
+
+body {
+  margin: 0;
+  background: #111210;
+}
+
+body,
+button,
+a,
+input {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: 12px;
+  z-index: 100;
+  padding: 10px 14px;
+  transform: translateY(-150%);
+  border-radius: 5px;
+  background: #d7ff63;
+  color: #111210;
+  font: 700 13px/1.2 'Manrope', 'Microsoft YaHei', sans-serif;
+  text-decoration: none;
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+    #reelsbuddy-homepage-concept {
+      --rb-ink: #111210;
+      --rb-paper: #f4f1e9;
+      --rb-white: #fffdf7;
+      --rb-orange: #ff5c35;
+      --rb-lime: #d7ff63;
+      --rb-blue: #6da2ff;
+      --rb-cyan: #79dfd0;
+      --rb-yellow: #f4cf55;
+      --rb-muted: #6d6b64;
+      --rb-line: rgba(17, 18, 16, 0.13);
+      --rb-mono: 'IBM Plex Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace;
+      --rb-sans: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      color: var(--rb-ink);
+      background: var(--rb-paper);
+      font-family: var(--rb-sans);
+      font-size: 16px;
+      line-height: 1.45;
+      overflow-x: clip;
+      overflow-y: visible;
+      border-radius: 0;
+    }
+
+    #reelsbuddy-homepage-concept *,
+    #reelsbuddy-homepage-concept *::before,
+    #reelsbuddy-homepage-concept *::after {
+      box-sizing: border-box;
+    }
+
+    #reelsbuddy-homepage-concept button,
+    #reelsbuddy-homepage-concept a {
+      font: inherit;
+    }
+
+    #reelsbuddy-homepage-concept button {
+      color: inherit;
+    }
+
+    #reelsbuddy-homepage-concept .rb-page {
+      background: var(--rb-paper);
+    }
+
+    #reelsbuddy-homepage-concept .rb-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      padding: 18px 34px;
+      color: #fff;
+      background: #111210;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-mark {
+      display: block;
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+      border: 1px solid #44443f;
+      border-radius: 8px;
+      background: #22221f;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      line-height: 1;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-by {
+      color: #97978e;
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav a {
+      border: 0;
+      background: transparent;
+      color: #b9b9b2;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav a:hover,
+    #reelsbuddy-homepage-concept .rb-nav a[aria-current] {
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 2px;
+      border: 1px solid #3b3b36;
+      border-radius: 6px;
+      background: #1b1b19;
+    }
+
+    #reelsbuddy-homepage-concept .rb-lang-switch button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      min-height: 28px;
+      padding: 0 6px;
+      border: 0;
+      border-radius: 4px;
+      background: transparent;
+      color: #92928a;
+      font-family: var(--rb-mono);
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-lang-switch button[aria-pressed="true"] {
+      background: var(--rb-paper);
+      color: var(--rb-ink);
+    }
+
+    #reelsbuddy-homepage-concept .rb-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      background: #fff;
+      color: #111210;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download:hover {
+      background: var(--rb-lime);
+      border-color: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-menu-button {
+      display: none;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 1px solid #41413c;
+      border-radius: 6px;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav {
+      display: none;
+      padding: 8px 18px 18px;
+      background: #111210;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav.is-open {
+      display: grid;
+      gap: 3px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 0;
+      border-bottom: 1px solid #2c2c28;
+      background: transparent;
+      color: #d9d9d3;
+      text-align: left;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav a {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border-bottom: 1px solid #2c2c28;
+      color: #d9d9d3;
+      text-decoration: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav a:hover {
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      place-items: center;
+      min-height: 650px;
+      padding: 72px 32px 92px;
+      overflow: hidden;
+      background: #111210;
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-wall {
+      position: absolute;
+      inset: -18px;
+      z-index: -2;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 192px;
+      gap: 10px;
+      transform: scale(1.01);
+      opacity: 0.66;
+      filter: saturate(0.78);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-wall::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(17, 18, 16, 0.18) 0, rgba(17, 18, 16, 0.72) 40%, rgba(17, 18, 16, 0.93) 76%),
+        linear-gradient(180deg, rgba(17, 18, 16, 0.35), rgba(17, 18, 16, 0.65));
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 760px;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-eyebrow {
+      margin: 0 0 18px;
+      color: var(--rb-lime);
+      font-family: var(--rb-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      color: #5e5b51;
+      font-family: var(--rb-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-kicker::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--rb-orange);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: 72px;
+      line-height: 0.98;
+      font-weight: 700;
+      letter-spacing: -0.065em;
+      text-wrap: balance;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-sub {
+      max-width: 565px;
+      margin: 22px 0 0;
+      color: #c9c9c1;
+      font-size: 16px;
+      line-height: 1.6;
+      text-wrap: balance;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 17px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-button {
+      position: relative;
+      padding: 0 38px;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-button > .rb-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--primary {
+      background: var(--rb-orange);
+      border-color: var(--rb-orange);
+      color: #111210;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--primary:hover {
+      background: var(--rb-lime);
+      border-color: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--dark {
+      background: var(--rb-ink);
+      border-color: var(--rb-ink);
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--dark:hover {
+      background: var(--rb-orange);
+      border-color: var(--rb-orange);
+      color: #111210;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--outline {
+      border-color: rgba(255, 255, 255, 0.26);
+      color: #fff;
+      background: rgba(17, 18, 16, 0.3);
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--outline:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    #reelsbuddy-homepage-concept .rb-icon {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section {
+      padding: 92px 34px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section-inner {
+      width: min(100%, 940px);
+      margin: 0 auto;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
+      align-items: end;
+      gap: 48px;
+      margin-bottom: 38px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section h2 {
+      max-width: 670px;
+      margin: 0;
+      font-size: 47px;
+      line-height: 1.03;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      text-wrap: balance;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section-sub {
+      max-width: 350px;
+      margin: 0;
+      color: var(--rb-muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    #reelsbuddy-homepage-concept .rb-use-cases {
+      border-bottom: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 32px;
+      border: 1px solid var(--rb-line);
+      border-radius: 999px;
+      background: transparent;
+      color: #47463f;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab > .rb-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab[aria-selected="true"] {
+      color: #fff;
+      background: var(--rb-ink);
+      border-color: var(--rb-ink);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-stage {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      min-height: 430px;
+      overflow: hidden;
+      border: 1px solid var(--rb-line);
+      border-radius: 8px;
+      background: var(--rb-white);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case="drama"] { --case-accent: #8ea8d8; }
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case="brand"] { --case-accent: #ff5c35; }
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case="product"] { --case-accent: #6da2ff; }
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case="data"] { --case-accent: #b4d957; }
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case="social"] { --case-accent: #f4cf55; }
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case="science"] { --case-accent: #79dfd0; }
+
+    #reelsbuddy-homepage-concept .rb-usecase-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px;
+      border-right: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-index {
+      color: var(--rb-muted);
+      font-family: var(--rb-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-copy h3 {
+      max-width: 340px;
+      margin: 24px 0 10px;
+      font-size: 33px;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-description {
+      max-width: 360px;
+      margin: 0;
+      color: var(--rb-muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    #reelsbuddy-homepage-concept .rb-brief-snippet {
+      max-width: 360px;
+      margin: 21px 0 0;
+      padding: 0 0 0 12px;
+      border-left: 2px solid var(--case-accent, var(--rb-orange));
+      color: #47463f;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    #reelsbuddy-homepage-concept .rb-brief-snippet span {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--rb-muted);
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 34px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-spec {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 8px;
+      border: 1px solid var(--rb-line);
+      border-radius: 4px;
+      color: #595850;
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-visual-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      padding: 38px;
+      background: #e9e5dc;
+      background: color-mix(in srgb, var(--case-accent, var(--rb-orange)) 10%, #e9e5dc);
+      overflow: hidden;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-visual-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(17, 18, 16, 0.14) 0.7px, transparent 0.7px);
+      background-size: 15px 15px;
+      opacity: 0.55;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-frame {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 470px);
+      aspect-ratio: 16 / 10;
+      border: 7px solid var(--case-accent, #111210);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(17, 18, 16, 0.2);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-frame--vertical {
+      width: min(58%, 245px);
+      aspect-ratio: 9 / 14;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-chip {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 7px;
+      border-radius: 4px;
+      background: rgba(17, 18, 16, 0.78);
+      color: #fff;
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      backdrop-filter: blur(5px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-chip .rb-icon {
+      width: 10px;
+      height: 10px;
+      flex-basis: 10px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-title {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 17px;
+      z-index: 4;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-title small {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-shadow: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #222;
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 36%, rgba(0, 0, 0, 0.66) 100%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb--brand {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0 25%, transparent 25% 100%),
+        linear-gradient(145deg, #20362b, #0d130f);
+    }
+
+    #reelsbuddy-homepage-concept .rb-bottle {
+      position: absolute;
+      left: 50%;
+      top: 42%;
+      width: 74px;
+      height: 118px;
+      transform: translate(-50%, -50%) rotate(3deg);
+      border-radius: 7px 7px 14px 14px;
+      background: linear-gradient(90deg, #7c775d 0%, #d4cfad 46%, #716b52 100%);
+      box-shadow: 0 24px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    #reelsbuddy-homepage-concept .rb-bottle::before {
+      content: '';
+      position: absolute;
+      top: -32px;
+      left: 24px;
+      width: 27px;
+      height: 34px;
+      border-radius: 3px 3px 1px 1px;
+      background: #b6a970;
+      box-shadow: inset -8px 0 0 rgba(0, 0, 0, 0.12);
+    }
+
+    #reelsbuddy-homepage-concept .rb-bottle::after {
+      content: 'SOLACE';
+      position: absolute;
+      inset: 42px 8px auto;
+      padding: 16px 3px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      color: rgba(255, 255, 255, 0.8);
+      font-family: var(--rb-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb--product {
+      background: linear-gradient(145deg, #ff6c49, #d4381e);
+    }
+
+    #reelsbuddy-homepage-concept .rb-product-screen {
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      width: 58%;
+      height: 70%;
+      transform: translate(-50%, -50%) rotate(-4deg);
+      border: 8px solid #131311;
+      border-radius: 22px;
+      background:
+        linear-gradient(#d7ff63 0 22%, transparent 22%),
+        linear-gradient(145deg, #f7f4eb, #c8c3b5);
+      box-shadow: 0 22px 48px rgba(60, 14, 4, 0.35);
+    }
+
+    #reelsbuddy-homepage-concept .rb-product-screen::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      top: 54px;
+      height: 9px;
+      border-radius: 2px;
+      background: #1b1b18;
+      box-shadow: 0 17px 0 #8d897e, 0 34px 0 #a8a398, 0 51px 0 #c0bbb0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-product-screen::after {
+      content: '';
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      width: 44%;
+      height: 28px;
+      border-radius: 4px;
+      background: #1b1b18;
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb--data {
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.15), transparent 45%),
+        #557ee7;
+    }
+
+    #reelsbuddy-homepage-concept .rb-data-plot {
+      position: absolute;
+      left: 12%;
+      right: 10%;
+      top: 19%;
+      bottom: 26%;
+      display: flex;
+      align-items: flex-end;
+      gap: 7%;
+      border-left: 1px solid rgba(255, 255, 255, 0.55);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    #reelsbuddy-homepage-concept .rb-data-plot span {
+      display: block;
+      flex: 1;
+      height: var(--bar, 50%);
+      background: #d7ff63;
+      border-radius: 2px 2px 0 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-data-plot span:nth-child(2n) {
+      background: #fffdf7;
+    }
+
+    #reelsbuddy-homepage-concept .rb-bar-26 { --bar: 26%; }
+    #reelsbuddy-homepage-concept .rb-bar-29 { --bar: 29%; }
+    #reelsbuddy-homepage-concept .rb-bar-32 { --bar: 32%; }
+    #reelsbuddy-homepage-concept .rb-bar-42 { --bar: 42%; }
+    #reelsbuddy-homepage-concept .rb-bar-44 { --bar: 44%; }
+    #reelsbuddy-homepage-concept .rb-bar-48 { --bar: 48%; }
+    #reelsbuddy-homepage-concept .rb-bar-57 { --bar: 57%; }
+    #reelsbuddy-homepage-concept .rb-bar-58 { --bar: 58%; }
+    #reelsbuddy-homepage-concept .rb-bar-66 { --bar: 66%; }
+    #reelsbuddy-homepage-concept .rb-bar-68 { --bar: 68%; }
+    #reelsbuddy-homepage-concept .rb-bar-72 { --bar: 72%; }
+    #reelsbuddy-homepage-concept .rb-bar-74 { --bar: 74%; }
+    #reelsbuddy-homepage-concept .rb-bar-82 { --bar: 82%; }
+    #reelsbuddy-homepage-concept .rb-bar-89 { --bar: 89%; }
+    #reelsbuddy-homepage-concept .rb-bar-91 { --bar: 91%; }
+
+    #reelsbuddy-homepage-concept .rb-thumb--social {
+      background: linear-gradient(155deg, #f8d653, #ff8c35);
+    }
+
+    #reelsbuddy-homepage-concept .rb-phone {
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      width: 45%;
+      height: 79%;
+      transform: translate(-50%, -50%) rotate(5deg);
+      border: 7px solid #141412;
+      border-radius: 22px;
+      background: #111210;
+      box-shadow: 0 26px 46px rgba(75, 31, 0, 0.32);
+      overflow: hidden;
+    }
+
+    #reelsbuddy-homepage-concept .rb-phone::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 63% 38%, #d8b895 0 13%, transparent 13.4%),
+        radial-gradient(circle at 63% 58%, #22201e 0 20%, transparent 20.4%),
+        linear-gradient(135deg, #5f7a71, #2f3834);
+    }
+
+    #reelsbuddy-homepage-concept .rb-phone::after {
+      content: 'MAKE THE MOVE';
+      position: absolute;
+      left: 11px;
+      right: 11px;
+      bottom: 15px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb--science {
+      background: linear-gradient(145deg, #89dfd2, #2d7774);
+    }
+
+    #reelsbuddy-homepage-concept .rb-orbit {
+      position: absolute;
+      left: 50%;
+      top: 47%;
+      width: 132px;
+      height: 132px;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      border-radius: 50%;
+    }
+
+    #reelsbuddy-homepage-concept .rb-orbit::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 67px;
+      height: 67px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #203d3b;
+      box-shadow: inset -13px -9px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    #reelsbuddy-homepage-concept .rb-orbit::after {
+      content: '';
+      position: absolute;
+      inset: 25px -22px;
+      border: 1px solid rgba(215, 255, 99, 0.9);
+      border-radius: 50%;
+      transform: rotate(40deg);
+    }
+
+    #reelsbuddy-homepage-concept .rb-thumb--drama {
+      background:
+        linear-gradient(90deg, transparent 0 67%, rgba(255, 255, 255, 0.12) 67% 68%, transparent 68%),
+        linear-gradient(0deg, transparent 0 72%, rgba(255, 255, 255, 0.09) 72% 73%, transparent 73%),
+        linear-gradient(145deg, #263449, #0e131c 60%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-drama-window {
+      position: absolute;
+      inset: 12% 18% 24% 18%;
+      border: 8px solid #0e131c;
+      background:
+        linear-gradient(90deg, transparent 49.2%, #0e131c 49.2% 50.8%, transparent 50.8%),
+        linear-gradient(0deg, transparent 49.2%, #0e131c 49.2% 50.8%, transparent 50.8%),
+        linear-gradient(160deg, #89a4bf, #d7b9aa 58%, #5d4e4c);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+    }
+
+    #reelsbuddy-homepage-concept .rb-drama-window::before,
+    #reelsbuddy-homepage-concept .rb-drama-window::after {
+      content: '';
+      position: absolute;
+      bottom: -18%;
+      width: 30%;
+      height: 66%;
+      border-radius: 50% 50% 0 0;
+      background: #111210;
+    }
+
+    #reelsbuddy-homepage-concept .rb-drama-window::before {
+      left: 17%;
+    }
+
+    #reelsbuddy-homepage-concept .rb-drama-window::after {
+      right: 16%;
+      transform: scale(0.92);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile {
+      border-radius: 7px;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile:nth-child(3n + 1) {
+      transform: translateY(-24px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile:nth-child(4n) {
+      transform: translateY(31px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step {
+      position: relative;
+      min-height: 230px;
+      padding: 25px 20px 26px;
+      border-right: 1px solid var(--rb-line);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(1) {
+      --step-color: var(--rb-orange);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(2) {
+      --step-color: var(--rb-blue);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(3) {
+      --step-color: var(--rb-cyan);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(4) {
+      --step-color: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step:last-child {
+      border-right: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -1px;
+      height: 3px;
+      background: var(--step-color, var(--rb-orange));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 160ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step[aria-pressed="true"]::before {
+      transform: scaleX(1);
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step:hover {
+      background: #f9f6ee;
+    }
+
+    #reelsbuddy-homepage-concept .rb-step-number {
+      color: var(--rb-muted);
+      font-family: var(--rb-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step-title {
+      display: block;
+      margin: 50px 0 8px;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step p {
+      margin: 0;
+      color: var(--rb-muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section {
+      padding: 92px 34px 104px;
+      background: #181816;
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-grid {
+      margin-bottom: 24px;
+      overflow: hidden;
+      border: 1px solid #3c3c37;
+      border-radius: 8px;
+      background: #22221f;
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step {
+      display: flex;
+      min-height: 160px;
+      padding: 18px 16px;
+      align-items: flex-start;
+      border-color: #353530;
+      color: #fff;
+      flex-direction: column;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:hover {
+      background: #292925;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step[aria-pressed="true"] {
+      background: #262622;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-step-number {
+      color: #999991;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step-title {
+      margin: 20px 0 6px;
+      color: #f4f4ee;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step p {
+      color: #a8a8a0;
+      font-size: 12px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-kicker {
+      color: #bdbdb5;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-kicker::before {
+      background: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section h2 {
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-section-sub {
+      color: #9d9d95;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-shell {
+      overflow: hidden;
+      border: 1px solid #3c3c37;
+      border-radius: 8px;
+      background: #22221f;
+      box-shadow: 0 32px 70px rgba(0, 0, 0, 0.42);
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 49px;
+      padding: 0 14px;
+      border-bottom: 1px solid #33332f;
+      background: #252522;
+    }
+
+    #reelsbuddy-homepage-concept .rb-window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-window-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5b5b55;
+    }
+
+    #reelsbuddy-homepage-concept .rb-window-dots span:first-child {
+      background: #ff7156;
+    }
+
+    #reelsbuddy-homepage-concept .rb-window-dots span:nth-child(2) {
+      background: #e5c44b;
+    }
+
+    #reelsbuddy-homepage-concept .rb-window-dots span:nth-child(3) {
+      background: #76bd84;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-project {
+      color: #bcbcb4;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-project > span + span {
+      margin-left: 7px;
+      color: #9b9b93;
+      font-family: var(--rb-mono);
+      font-size: 10px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-tools {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-tool {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid #3d3d38;
+      border-radius: 5px;
+      background: #2d2d29;
+      color: #aaa9a1;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-body {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr) 218px;
+      min-height: 445px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-assets {
+      padding: 16px 11px;
+      border-right: 1px solid #353530;
+      background: #20201d;
+    }
+
+    #reelsbuddy-homepage-concept .rb-panel-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 13px;
+      color: #a0a099;
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #363630;
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset--a {
+      background: linear-gradient(145deg, #567267, #17211e);
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset--b {
+      background: linear-gradient(145deg, #dfcb9f, #735f3f);
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset--c {
+      background: linear-gradient(145deg, #7495d7, #263755);
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset--d {
+      background: linear-gradient(145deg, #ef7857, #822d24);
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset--e {
+      background: linear-gradient(145deg, #72d0c2, #1e514e);
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset--f {
+      background: linear-gradient(145deg, #e3dfcc, #8b866f);
+    }
+
+    #reelsbuddy-homepage-concept .rb-asset-add {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1;
+      border: 1px dashed #4a4a44;
+      border-radius: 4px;
+      color: #9a9a92;
+    }
+
+    #reelsbuddy-homepage-concept .rb-stage {
+      position: relative;
+      min-width: 0;
+      background: #171715;
+      overflow: hidden;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-canvas {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: repeat(8, minmax(0, 1fr));
+      gap: 9px;
+      min-height: 445px;
+      padding: 20px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(215, 255, 99, 0.055), transparent 38%),
+        radial-gradient(rgba(255, 255, 255, 0.13) 0.65px, transparent 0.65px),
+        #171715;
+      background-size: auto, 14px 14px, auto;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node {
+      position: relative;
+      z-index: 2;
+      min-width: 0;
+      overflow: hidden;
+      padding: 10px;
+      border: 1px solid #41413c;
+      border-radius: 5px;
+      background: #242420;
+      color: #d8d8d0;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node--idea {
+      grid-area: 1 / 1 / 3 / 4;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node--script {
+      grid-area: 1 / 10 / 3 / 13;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node--refs {
+      grid-area: 7 / 1 / 9 / 4;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node--output {
+      grid-area: 7 / 10 / 9 / 13;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node--scene {
+      display: grid;
+      grid-area: 2 / 4 / 7 / 10;
+      place-items: center;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      color: #999991;
+      font-family: var(--rb-mono);
+      font-size: 9px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-head span:last-child {
+      color: #a0a098;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-body {
+      display: block;
+      margin-top: 8px;
+      color: #c7c7bf;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-body small {
+      display: block;
+      margin-top: 3px;
+      color: #82827a;
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-swatches {
+      display: flex;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-swatches span {
+      display: block;
+      width: 22px;
+      height: 18px;
+      border-radius: 3px;
+      background: #4d7870;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-swatches span:nth-child(2) {
+      background: #8f7652;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-swatches span:nth-child(3) {
+      background: #586f9b;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-preview {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid #61615a;
+      border-radius: 4px;
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.14), transparent 40%),
+        linear-gradient(145deg, #4d7870, #1a2624);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.34), 0 0 0 2px rgba(215, 255, 99, 0.11);
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-preview::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 46%;
+      background:
+        radial-gradient(ellipse at 50% 10%, rgba(215, 255, 99, 0.23), transparent 40%),
+        linear-gradient(180deg, rgba(12, 19, 18, 0.05), rgba(9, 13, 13, 0.88));
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-selection {
+      position: absolute;
+      inset: -5px;
+      z-index: 3;
+      border: 1px solid rgba(215, 255, 99, 0.8);
+      border-radius: 5px;
+      pointer-events: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-selection::before,
+    #reelsbuddy-homepage-concept .rb-flow-selection::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-selection::before {
+      left: -3px;
+      top: -3px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-selection::after {
+      right: -3px;
+      bottom: -3px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-scene-badge {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 3;
+      padding: 4px 6px;
+      border-radius: 3px;
+      background: rgba(17, 18, 16, 0.72);
+      color: #c5c5bd;
+      font-family: var(--rb-mono);
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-canvas-headline {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      top: 35%;
+      z-index: 2;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-canvas-caption {
+      position: absolute;
+      left: 50%;
+      bottom: 16px;
+      z-index: 2;
+      padding: 5px 8px;
+      transform: translateX(-50%);
+      background: rgba(17, 18, 16, 0.86);
+      color: #fff;
+      font-family: var(--rb-mono);
+      font-size: 9px;
+      letter-spacing: 0.04em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-canvas-tools {
+      position: absolute;
+      left: 50%;
+      bottom: 17px;
+      z-index: 4;
+      display: flex;
+      gap: 3px;
+      padding: 3px;
+      transform: translateX(-50%);
+      border: 1px solid #41413b;
+      border-radius: 5px;
+      background: #252521;
+    }
+
+    #reelsbuddy-homepage-concept .rb-canvas-tool {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      color: #a2a29a;
+    }
+
+    #reelsbuddy-homepage-concept .rb-canvas-tool .rb-icon {
+      width: 12px;
+      height: 12px;
+      flex-basis: 12px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 0;
+      padding: 14px 11px;
+      border-left: 1px solid #353530;
+      background: #252522;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #d0d0c8;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    #reelsbuddy-homepage-concept .rb-agent-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-agent-mark span {
+      display: grid;
+      place-items: center;
+      width: 19px;
+      height: 19px;
+      border-radius: 5px;
+      background: var(--rb-lime);
+      color: #111210;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    #reelsbuddy-homepage-concept .rb-agent-word {
+      font-style: normal;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat-message {
+      padding: 10px;
+      border: 1px solid #3a3a35;
+      border-radius: 5px;
+      background: #2b2b27;
+      color: #b6b6ae;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat-message--user {
+      margin-left: 22px;
+      background: #33332e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat-message strong {
+      color: #f4f4ee;
+      font-weight: 700;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat-action {
+      margin-top: auto;
+      padding: 10px;
+      border: 1px solid #41413b;
+      border-radius: 5px;
+      color: #999991;
+      font-size: 11px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-note-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 21px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #a8a8a0;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-note .rb-icon {
+      margin-top: 2px;
+      color: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-showcase {
+      border-bottom: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-showcase-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr 0.85fr;
+      gap: 14px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      text-align: left;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card-visual {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card:first-child .rb-work-card-visual {
+      aspect-ratio: 16 / 10;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 2px 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card p {
+      margin: 4px 0 0;
+      color: var(--rb-muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    #reelsbuddy-homepage-concept .rb-ratio {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 0 7px;
+      border: 1px solid var(--rb-line);
+      border-radius: 4px;
+      color: var(--rb-muted);
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    #reelsbuddy-homepage-concept .rb-play-chip {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      z-index: 4;
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 253, 247, 0.92);
+      color: #111210;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-play-chip:hover {
+      background: var(--rb-orange);
+    }
+
+    #reelsbuddy-homepage-concept .rb-play-chip .rb-icon {
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+      transform: translateX(1px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-section {
+      position: relative;
+      overflow: hidden;
+      padding: 96px 34px 160px;
+      background: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-section::before {
+      content: 'RB';
+      position: absolute;
+      right: -26px;
+      bottom: -88px;
+      color: rgba(17, 18, 16, 0.075);
+      font-size: 300px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.1em;
+      pointer-events: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(100%, 940px);
+      margin: 0 auto;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+      max-width: 600px;
+      margin: 0;
+      font-size: 61px;
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      text-wrap: balance;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-panel {
+      width: 410px;
+      max-width: 100%;
+      flex: 0 0 410px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-panel p {
+      margin: 0 0 17px;
+      color: rgba(17, 18, 16, 0.68);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-choice {
+      position: relative;
+      min-width: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons .rb-button {
+      position: relative;
+      justify-content: center;
+      width: 100%;
+      padding: 0 14px;
+      background: var(--rb-ink);
+      border-color: var(--rb-ink);
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons .rb-button:hover {
+      background: var(--rb-white);
+      border-color: var(--rb-white);
+      color: var(--rb-ink);
+    }
+
+    #reelsbuddy-homepage-concept .rb-platform-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 0;
+      padding: 0 26px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-platform-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+      stroke: none;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-chevron {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-50%) rotate(45deg);
+      transition: transform 160ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-trigger[aria-expanded="true"] .rb-download-chevron {
+      transform: translateY(-50%) rotate(225deg);
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons > .rb-button > .rb-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-menu {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 7px);
+      z-index: 30;
+      width: min(300px, calc(100vw - 36px));
+      overflow: hidden;
+      border: 1px solid #3d3d37;
+      border-radius: 8px;
+      background: var(--rb-white);
+      box-shadow: 0 18px 45px rgba(17, 18, 16, 0.24);
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-menu[hidden] {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      width: 100%;
+      min-height: 62px;
+      padding: 11px 14px;
+      border: 0;
+      border-bottom: 1px solid var(--rb-line);
+      background: transparent;
+      color: var(--rb-ink);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option:last-child {
+      border-bottom: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option:hover,
+    #reelsbuddy-homepage-concept .rb-download-option:focus-visible {
+      background: #ece8de;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option-copy {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option strong {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option small {
+      color: var(--rb-muted);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer {
+      display: grid;
+      grid-template-columns: 1.1fr 0.55fr 1fr 0.55fr;
+      gap: 32px;
+      padding: 42px 34px;
+      background: #111210;
+      color: #fff;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer .rb-logo-mark {
+      width: 30px;
+      height: 30px;
+      font-size: 11px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer p {
+      max-width: 190px;
+      margin: 13px 0 0;
+      color: #8a8a82;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-col h3 {
+      margin: 0 0 12px;
+      color: #83837b;
+      font-family: var(--rb-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-formats {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      align-content: start;
+      column-gap: 32px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-formats h3 {
+      grid-column: 1 / -1;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-col button,
+    #reelsbuddy-homepage-concept .rb-footer-col a {
+      display: flex;
+      align-items: center;
+      min-height: 28px;
+      margin: 0 0 2px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #d1d1ca;
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: left;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-col button:hover,
+    #reelsbuddy-homepage-concept .rb-footer-col a:hover {
+      color: var(--rb-lime);
+    }
+
+    #reelsbuddy-homepage-concept :is(a, button, input):focus-visible {
+      outline: 2px solid var(--rb-orange);
+      outline-offset: 3px;
+    }
+
+    #reelsbuddy-homepage-concept :is(#formats, #studio, #showcase, #download) {
+      scroll-margin-top: 76px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-status {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      z-index: 40;
+      max-width: min(92vw, 420px);
+      padding: 11px 14px;
+      transform: translate(-50%, 18px);
+      border: 1px solid #3d3d37;
+      border-radius: 6px;
+      background: #242420;
+      color: #f4f4ee;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-status.is-visible {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    #reelsbuddy-homepage-concept .rb-fade {
+      animation: rbFade 420ms ease both;
+    }
+
+    @keyframes rbFade {
+      from {
+        opacity: 0.38;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+      font-size: 66px;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-section h2 {
+      font-size: 44px;
+      line-height: 1.14;
+      letter-spacing: -0.04em;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-usecase-tab,
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-button,
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-workflow-step-title {
+      letter-spacing: 0;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-cta-inner h2 {
+      font-size: 56px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      #reelsbuddy-homepage-concept .rb-fade {
+        animation: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-download-status,
+      .skip-link {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      #reelsbuddy-homepage-concept .rb-nav {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-menu-button {
+        display: grid;
+      }
+
+      #reelsbuddy-homepage-concept .rb-header {
+        padding: 14px 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero {
+        min-height: 590px;
+        padding: 64px 22px 78px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-wall {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 160px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1 {
+        font-size: 56px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 50px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-section h2 {
+        font-size: 39px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section,
+      #reelsbuddy-homepage-concept .rb-editor-section {
+        padding: 72px 22px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section-head {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section h2 {
+        font-size: 41px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-stage {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy {
+        border-right: 0;
+        border-bottom: 1px solid var(--rb-line);
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(2) {
+        border-right: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--rb-line);
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-body {
+        grid-template-columns: 118px minmax(0, 1fr);
+      }
+
+      #reelsbuddy-homepage-concept .rb-chat {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-note-row {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-showcase-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:first-child {
+        grid-column: 1 / -1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:first-child .rb-work-card-visual {
+        aspect-ratio: 16 / 9;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 34px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+        font-size: 53px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-cta-inner h2 {
+        font-size: 48px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-panel {
+        width: 100%;
+        flex-basis: auto;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer {
+        grid-template-columns: 0.85fr 1.2fr 0.85fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #reelsbuddy-homepage-concept .rb-header-actions .rb-download {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero {
+        min-height: 620px;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-wall {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 142px;
+        opacity: 0.46;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1 {
+        font-size: 43px;
+        letter-spacing: -0.058em;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 38px;
+        line-height: 1.16;
+        letter-spacing: -0.035em;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-sub {
+        font-size: 14px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-actions {
+        width: 100%;
+        max-width: 310px;
+        flex-direction: column;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-actions .rb-button {
+        width: 100%;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section,
+      #reelsbuddy-homepage-concept .rb-editor-section {
+        padding: 60px 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section h2 {
+        font-size: 36px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-section h2 {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy {
+        padding: 25px 22px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy h3 {
+        font-size: 28px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-visual-wrap {
+        padding: 30px 20px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-step {
+        min-height: 170px;
+        border-right: 0;
+        border-bottom: 1px solid var(--rb-line);
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-step:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--rb-line);
+      }
+
+      #reelsbuddy-homepage-concept .rb-workflow-step-title {
+        margin-top: 28px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-body {
+        grid-template-columns: 1fr;
+        min-height: 360px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-assets {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-canvas {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        gap: 7px;
+        min-height: 0;
+        padding: 12px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node {
+        grid-area: auto;
+        padding: 8px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--scene {
+        grid-area: auto;
+        grid-column: 1 / -1;
+        grid-row: 1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--idea {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--script {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--refs {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--output {
+        grid-column: 2;
+        grid-row: 3;
+      }
+
+      #reelsbuddy-homepage-concept .rb-canvas-tools {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-preview {
+        width: min(100%, 300px);
+        margin: 0 auto;
+      }
+
+      #reelsbuddy-homepage-concept .rb-canvas-headline {
+        left: 14px;
+        right: 14px;
+        font-size: 16px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-topbar {
+        padding: 0 9px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-project span,
+      #reelsbuddy-homepage-concept .rb-editor-tool:nth-child(2) {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:first-child {
+        grid-column: auto;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-section {
+        padding: 70px 18px 150px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+        font-size: 43px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-cta-inner h2 {
+        font-size: 38px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons .rb-button {
+        min-height: 48px;
+        padding: 6px 10px;
+        gap: 5px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-platform-label {
+        padding: 0 20px;
+        white-space: normal;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons > .rb-button > .rb-icon {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-download-chevron {
+        right: 10px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons .rb-platform-icon {
+        left: 10px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 34px 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer-formats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 8px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer > :first-child {
+        grid-column: 1 / -1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer-col:last-child {
+        grid-column: 1 / -1;
+      }
+    }
