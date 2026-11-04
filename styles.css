@@ -682,7 +682,7 @@ input {
       position: absolute;
       left: 18px;
       right: 18px;
-      bottom: 17px;
+      bottom: 56px;
       z-index: 4;
       color: #fff;
       font-size: 20px;
@@ -709,6 +709,14 @@ input {
       height: 100%;
       overflow: hidden;
       background: #222;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #0c0d0e;
+      object-fit: cover;
     }
 
     #reelsbuddy-homepage-concept .rb-thumb::after {
@@ -2383,5 +2391,1826 @@ input {
 
       #reelsbuddy-homepage-concept .rb-footer-col:last-child {
         grid-column: 1 / -1;
+      }
+    }
+
+    /* Cut Room refinement: one footage-led composition, one signal color. */
+    @font-face {
+      font-family: 'Noto Sans SC';
+      src: url('./assets/noto-sans-sc-subset.woff2') format('woff2');
+      font-style: normal;
+      font-weight: 400 800;
+      font-display: swap;
+    }
+
+    html {
+      background: #0c0d0e;
+    }
+
+    body {
+      background: #0c0d0e;
+    }
+
+    .skip-link {
+      background: #f5f3ed;
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept {
+      --rb-ink: #0c0d0e;
+      --rb-paper: #e9e7e1;
+      --rb-white: #f8f6f0;
+      --rb-orange: #e64b35;
+      --rb-lime: #f8f6f0;
+      --rb-blue: #718085;
+      --rb-cyan: #879194;
+      --rb-yellow: #a99b7b;
+      --rb-signal: #e64b35;
+      --rb-slate: #737d80;
+      --rb-muted: #4f5759;
+      --rb-line: rgba(12, 13, 14, 0.16);
+      --rb-border-subtle: #454d4f;
+      --rb-border-strong: #596164;
+      --rb-footer-heading: #9aa1a3;
+      --rb-focus: #d7ff63;
+      --rb-mono: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      --rb-sans: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      background: var(--rb-paper);
+      letter-spacing: 0;
+      font-feature-settings: 'kern' 1, 'liga' 1, 'tnum' 1;
+    }
+
+    #reelsbuddy-homepage-concept ::selection {
+      background: var(--rb-signal);
+      color: var(--rb-ink);
+    }
+
+    #reelsbuddy-homepage-concept :where(*) {
+      letter-spacing: 0 !important;
+    }
+
+    #reelsbuddy-homepage-concept .rb-page {
+      background: var(--rb-paper);
+    }
+
+    #reelsbuddy-homepage-concept .rb-header {
+      top: 0;
+      min-height: 66px;
+      padding: 10px 32px;
+      border-bottom-color: #2c3032;
+      background: #0c0d0e;
+      transition: top 180ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo {
+      gap: 0;
+      min-height: 44px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-copy {
+      gap: 4px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-name {
+      color: #f8f6f0;
+      font-size: 18px;
+      font-weight: 750;
+    }
+
+    #reelsbuddy-homepage-concept .rb-logo-by {
+      color: #91989a;
+      font-family: var(--rb-sans);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav {
+      gap: 8px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 12px;
+      color: #aeb3b4;
+      font-size: 14px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav a::after {
+      content: '';
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 5px;
+      height: 1px;
+      background: var(--rb-signal);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 160ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-nav a:hover::after,
+    #reelsbuddy-homepage-concept .rb-nav a[aria-current]::after {
+      transform: scaleX(1);
+    }
+
+    #reelsbuddy-homepage-concept .rb-lang-switch {
+      border-color: #3b4042;
+      border-radius: 3px;
+      background: #141617;
+    }
+
+    #reelsbuddy-homepage-concept .rb-lang-switch button {
+      min-width: 40px;
+      min-height: 40px;
+      padding: 0 8px;
+      border-radius: 2px;
+      color: #92999b;
+      font-family: var(--rb-sans);
+      font-size: 12px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-lang-switch button[aria-pressed="true"] {
+      background: #f8f6f0;
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download {
+      position: relative;
+      min-height: 44px;
+      padding: 0 37px;
+      border-color: #f8f6f0;
+      border-radius: 3px;
+      background: #f8f6f0;
+      color: #0c0d0e;
+      font-size: 14px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download > .rb-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-download:hover {
+      border-color: var(--rb-focus);
+      background: var(--rb-focus);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-menu-button {
+      width: 44px;
+      height: 44px;
+      border-color: #3b4042;
+      border-radius: 3px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav {
+      background: #0c0d0e;
+      border-bottom-color: #303436;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav.is-open {
+      position: sticky;
+      top: 66px;
+      z-index: 19;
+    }
+
+    #reelsbuddy-homepage-concept .rb-mobile-nav a {
+      min-height: 48px;
+      padding: 14px 12px;
+      border-bottom-color: #292d2f;
+      color: #d5d7d6;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
+      align-items: center;
+      justify-items: stretch;
+      gap: 72px;
+      min-height: 690px;
+      padding: 76px max(32px, calc((100vw - 1160px) / 2)) 90px;
+      overflow: hidden;
+      background: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-copy {
+      align-items: flex-start;
+      justify-self: start;
+      max-width: 610px;
+      text-align: left;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero h1 {
+      max-width: 600px;
+      color: #f8f6f0;
+      font-size: 72px;
+      line-height: 0.96;
+      font-weight: 750;
+      text-wrap: balance;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+      max-width: 600px;
+      font-size: 62px;
+      line-height: 1.08;
+      font-weight: 700;
+      text-wrap: nowrap;
+      white-space: nowrap;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-sub {
+      max-width: 500px;
+      margin-top: 24px;
+      color: #bfc3c3;
+      font-size: 17px;
+      line-height: 1.58;
+      text-wrap: pretty;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 12px;
+      margin-top: 31px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-button {
+      min-height: 48px;
+      padding: 0 22px;
+      text-align: center;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-downloads {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      width: min(100%, 520px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-hero-download {
+      position: relative;
+      width: 100%;
+      min-height: 52px;
+      padding: 0 38px;
+      border-color: #f8f6f0;
+      background: #f8f6f0;
+      color: #0c0d0e;
+      font-weight: 750;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-hero-download:hover {
+      border-color: var(--rb-focus);
+      background: var(--rb-focus);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-hero-download > .rb-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-download .rb-platform-label {
+      width: 100%;
+      padding: 0 18px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-demo-link {
+      display: inline-flex;
+      align-items: center;
+      align-self: center;
+      min-height: 30px;
+      border-bottom: 1px solid #596164;
+      color: #bfc3c3;
+      font-size: 14px;
+      font-weight: 650;
+      text-decoration: none;
+      transition: border-color 160ms ease, color 160ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-demo-link:hover {
+      border-color: var(--rb-focus);
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-button--primary {
+      padding: 0 38px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-actions .rb-button--primary > .rb-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #reelsbuddy-homepage-concept .rb-button {
+      border-radius: 3px;
+      font-size: 14px;
+      transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--primary {
+      border-color: var(--rb-signal);
+      background: var(--rb-signal);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--primary:hover {
+      border-color: var(--rb-focus);
+      background: var(--rb-focus);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--outline {
+      border-color: #484e50;
+      background: transparent;
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-button--outline:hover {
+      border-color: var(--rb-focus);
+      background: #17191a;
+      color: var(--rb-focus);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      width: 100%;
+      margin: 34px 0 0;
+      padding: 17px 0 0;
+      border-top: 1px solid var(--rb-border-subtle);
+      color: #9ba1a2;
+      font-size: 13px;
+      line-height: 1.45;
+      list-style: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-proof li {
+      padding: 0 18px;
+      border-left: 1px solid var(--rb-border-subtle);
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-proof li:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-visual {
+      position: relative;
+      min-width: 0;
+      width: 100%;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-wall {
+      position: relative;
+      inset: auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(4, minmax(0, 1fr));
+      grid-auto-flow: dense;
+      gap: 6px;
+      width: 100%;
+      min-height: 0;
+      aspect-ratio: 1.14 / 1;
+      padding: 7px;
+      overflow: hidden;
+      transform: none;
+      border: 1px solid #34383a;
+      border-radius: 4px;
+      background: #151718;
+      opacity: 1;
+      filter: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-wall::after {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-wall.rb-hero-wall--video {
+      display: block;
+      aspect-ratio: 16 / 9;
+      padding: 0;
+      background: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 2px;
+      background: #0c0d0e;
+      object-fit: cover;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile {
+      min-width: 0;
+      min-height: 0;
+      transform: none;
+      border: 0;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile:nth-child(3n + 1),
+    #reelsbuddy-homepage-concept .rb-hero-tile:nth-child(4n) {
+      transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile:first-child {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-tile:last-child {
+      grid-column: 3 / span 2;
+      grid-row: 4;
+    }
+
+    #reelsbuddy-homepage-concept .rb-hero-visual-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 11px 2px 0;
+      color: #8f9698;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    #reelsbuddy-homepage-concept .rb-concept-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-rec-dot {
+      width: 6px;
+      height: 6px;
+      flex: 0 0 6px;
+      border-radius: 50%;
+      background: var(--rb-signal);
+    }
+
+    #reelsbuddy-homepage-concept .rb-ratio-meta {
+      font-variant-numeric: tabular-nums;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section {
+      padding: 102px 32px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section-inner {
+      width: min(100%, 1120px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-section-head {
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 350px);
+      align-items: end;
+      gap: 56px;
+      margin-bottom: 44px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section h2 {
+      max-width: 760px;
+      color: var(--rb-ink);
+      font-size: 48px;
+      line-height: 1.02;
+      font-weight: 750;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-section h2 {
+      font-size: 48px;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+
+    #reelsbuddy-homepage-concept .rb-section-sub {
+      max-width: 350px;
+      color: var(--rb-muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    #reelsbuddy-homepage-concept .rb-kicker {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-use-cases {
+      border-bottom: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tabs {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+      border: 1px solid #c8c5bd;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab {
+      position: static;
+      display: inline-flex;
+      justify-content: flex-start;
+      min-height: 56px;
+      padding: 0 16px;
+      border: 0;
+      border-right: 1px solid #ccc9c1;
+      border-radius: 0;
+      background: #e3e0d8;
+      color: #44494a;
+      font-size: 13px;
+      font-weight: 650;
+      text-align: left;
+      transition: background-color 150ms ease, color 150ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab:last-child {
+      border-right: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab > .rb-icon {
+      position: static;
+      margin-right: 8px;
+      transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab:hover {
+      background: #ece9e2;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-tab[aria-selected="true"] {
+      background: #0c0d0e;
+      box-shadow: inset 0 3px var(--rb-signal);
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-stage,
+    #reelsbuddy-homepage-concept .rb-usecase-stage[data-case] {
+      --case-accent: var(--rb-signal);
+      grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+      min-height: 500px;
+      border: 1px solid #24282a;
+      border-radius: 0 0 4px 4px;
+      background: #0e1011;
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-copy {
+      justify-content: flex-start;
+      padding: 46px;
+      border-right-color: #303436;
+      background: #121415;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-index {
+      color: #91989a;
+      font-family: var(--rb-sans);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-copy h3 {
+      max-width: 390px;
+      margin: 28px 0 14px;
+      color: #f8f6f0;
+      font-size: 42px;
+      line-height: 1.04;
+      font-weight: 720;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-usecase-copy h3 {
+      font-size: 38px;
+      line-height: 1.16;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-description {
+      max-width: 390px;
+      color: #b8bdbc;
+      font-size: 16px;
+      line-height: 1.68;
+    }
+
+    #reelsbuddy-homepage-concept .rb-brief-snippet {
+      max-width: 390px;
+      margin-top: 26px;
+      padding: 13px 15px;
+      border: 0;
+      border-left: 2px solid var(--rb-signal);
+      background: #1a1c1d;
+      color: #c8cbc9;
+      font-size: 14px;
+      line-height: 1.62;
+    }
+
+    #reelsbuddy-homepage-concept .rb-brief-snippet span {
+      margin-bottom: 5px;
+      color: #858d8f;
+      font-family: var(--rb-sans);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-specs {
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 34px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-spec {
+      min-height: 28px;
+      padding: 5px 9px;
+      border-color: #3b4042;
+      border-radius: 2px;
+      color: #aeb4b5;
+      font-family: var(--rb-sans);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-visual-wrap {
+      padding: 40px;
+      background-color: #0b0c0d;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-visual-wrap::before {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-frame {
+      width: min(100%, 510px);
+      border: 1px solid #646b6d;
+      border-radius: 3px;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.46);
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-frame--vertical {
+      width: min(58%, 270px);
+      aspect-ratio: 9 / 14;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-chip {
+      border-radius: 2px;
+      background: rgba(12, 13, 14, 0.88);
+      font-family: var(--rb-sans);
+      font-variant-numeric: tabular-nums;
+      text-transform: none;
+      backdrop-filter: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-controls {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 8px;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr) auto 28px;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 6px 8px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 2px;
+      background: rgba(12, 13, 14, 0.88);
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-toggle,
+    #reelsbuddy-homepage-concept .rb-video-mute {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      border: 0;
+      border-radius: 2px;
+      background: transparent;
+      color: #f8f6f0;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-toggle:hover,
+    #reelsbuddy-homepage-concept .rb-video-mute:hover {
+      background: var(--rb-focus);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-toggle .rb-icon {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      stroke: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-mute .rb-icon {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-progress {
+      width: 100%;
+      height: 20px;
+      margin: 0;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-progress::-webkit-slider-runnable-track {
+      height: 3px;
+      border-radius: 99px;
+      background: linear-gradient(
+        90deg,
+        var(--rb-focus) 0 var(--rb-video-progress, 0%),
+        rgba(255, 255, 255, 0.34) var(--rb-video-progress, 0%) 100%
+      );
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-progress::-webkit-slider-thumb {
+      width: 10px;
+      height: 10px;
+      margin-top: -3.5px;
+      appearance: none;
+      border: 2px solid #0c0d0e;
+      border-radius: 50%;
+      background: #f8f6f0;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-progress::-moz-range-track {
+      height: 3px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.34);
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-progress::-moz-range-progress {
+      height: 3px;
+      border-radius: 99px;
+      background: var(--rb-focus);
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-progress::-moz-range-thumb {
+      width: 8px;
+      height: 8px;
+      border: 2px solid #0c0d0e;
+      border-radius: 50%;
+      background: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-time {
+      color: #c9cdcd;
+      font-size: 10px;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-frame--vertical .rb-video-time {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-usecase-frame--vertical .rb-video-controls {
+      grid-template-columns: 28px minmax(0, 1fr) 28px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-video-title small {
+      font-family: var(--rb-sans);
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section {
+      padding: 102px 32px 110px;
+      background: #111314;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-section-head {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section h2 {
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-section-sub {
+      color: #a8adae;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-grid {
+      margin-bottom: 28px;
+      overflow: visible;
+      border: 0;
+      border-top: 1px solid var(--rb-border-subtle);
+      border-left: 2px solid var(--rb-border-strong);
+      border-right: 2px solid var(--rb-border-strong);
+      border-bottom: 1px solid var(--rb-border-subtle);
+      border-radius: 0;
+      background: transparent;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step,
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(1),
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(2),
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(3),
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(4) {
+      --step-color: var(--rb-signal);
+      min-height: 176px;
+      padding: 22px 20px 24px;
+      border: 0;
+      border-right: 1px solid var(--rb-border-subtle);
+      background: transparent;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:last-child {
+      border-right: 0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:hover,
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step[aria-pressed="true"] {
+      background: #17191a;
+    }
+
+    #reelsbuddy-homepage-concept .rb-workflow-step::before {
+      top: auto;
+      bottom: -1px;
+      height: 2px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-step-number {
+      color: #8e9698;
+      font-family: var(--rb-sans);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-step-number {
+      color: #8e9698;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step[aria-pressed="true"] .rb-step-number {
+      color: #f0a89d;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step-title {
+      margin: 31px 0 8px;
+      color: #edeeec;
+      font-size: 20px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step p {
+      color: #a7adae;
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-shell {
+      border-color: var(--rb-border-strong);
+      border-radius: 4px;
+      background: #181a1b;
+      box-shadow: 0 28px 76px rgba(0, 0, 0, 0.38);
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-topbar {
+      min-height: 50px;
+      border-bottom-color: var(--rb-border-subtle);
+      background: #1d2021;
+    }
+
+    #reelsbuddy-homepage-concept .rb-window-dots {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-project {
+      color: #c3c7c7;
+      font-size: 13px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-project > span + span {
+      color: #92999b;
+      font-family: var(--rb-sans);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #reelsbuddy-homepage-concept .rb-panel-label {
+      color: #92999b;
+      font-family: var(--rb-sans);
+      font-size: 11px;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-agent-mark span {
+      border-radius: 2px;
+      background: var(--rb-signal);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-head {
+      font-family: var(--rb-sans);
+      font-size: 10px;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-body {
+      font-size: 12px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-node-body small {
+      font-size: 10px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-preview {
+      border-color: #6e7678;
+      border-radius: 2px;
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.34), 0 0 0 2px rgba(230, 75, 53, 0.2);
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-selection {
+      border-color: rgba(230, 75, 53, 0.9);
+      border-radius: 2px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-flow-selection::before,
+    #reelsbuddy-homepage-concept .rb-flow-selection::after {
+      background: var(--rb-signal);
+    }
+
+    #reelsbuddy-homepage-concept .rb-scene-badge,
+    #reelsbuddy-homepage-concept .rb-canvas-caption {
+      border-radius: 2px;
+      font-family: var(--rb-sans);
+      font-size: 10px;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-chat-message,
+    #reelsbuddy-homepage-concept .rb-chat-action {
+      font-size: 12px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-editor-note .rb-icon {
+      color: var(--rb-signal);
+    }
+
+    #reelsbuddy-homepage-concept .rb-showcase {
+      border-bottom: 1px solid var(--rb-line);
+    }
+
+    #reelsbuddy-homepage-concept .rb-showcase .rb-section-head {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-showcase-grid {
+      grid-template-columns: 1.2fr 0.78fr 0.96fr;
+      align-items: end;
+      gap: 22px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card:nth-child(2) {
+      padding-top: 68px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card:nth-child(3) {
+      padding-top: 24px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card-visual,
+    #reelsbuddy-homepage-concept .rb-work-card:first-child .rb-work-card-visual {
+      aspect-ratio: 16 / 10;
+      border: 0;
+      border-radius: 3px;
+      background: #151718;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card:nth-child(2) .rb-work-card-visual {
+      aspect-ratio: 4 / 5;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card:nth-child(3) .rb-work-card-visual {
+      aspect-ratio: 16 / 9;
+    }
+
+    #reelsbuddy-homepage-concept .rb-concept-chip {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 7px;
+      border-radius: 2px;
+      background: #f8f6f0;
+      color: #0c0d0e;
+      font-size: 10px;
+      font-weight: 650;
+      line-height: 1.2;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card-meta {
+      padding: 13px 1px 0;
+      border-top: 1px solid #d6d2ca;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card h3 {
+      color: var(--rb-ink);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #reelsbuddy-homepage-concept .rb-work-card p {
+      color: var(--rb-muted);
+      font-size: 12px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-ratio {
+      min-height: 24px;
+      border-color: #c6c2ba;
+      border-radius: 2px;
+      color: #5e6365;
+      font-family: var(--rb-sans);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #reelsbuddy-homepage-concept .rb-play-chip {
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(12, 13, 14, 0.18);
+      border-radius: 50%;
+      background: #f8f6f0;
+      color: #0c0d0e;
+      transition: background-color 150ms ease, color 150ms ease;
+    }
+
+    #reelsbuddy-homepage-concept .rb-play-chip:hover {
+      background: var(--rb-focus);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-section {
+      overflow: visible;
+      padding: 108px 32px 116px;
+      background: #0c0d0e;
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-section::before {
+      display: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 410px;
+      align-items: end;
+      gap: 72px;
+      width: min(100%, 1120px);
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+      max-width: 650px;
+      color: #f8f6f0;
+      font-size: 64px;
+      line-height: 0.98;
+      font-weight: 740;
+    }
+
+    #reelsbuddy-homepage-concept[data-lang="zh"] .rb-cta-inner h2 {
+      font-size: 58px;
+      line-height: 1.08;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-panel p {
+      max-width: 410px;
+      margin-bottom: 20px;
+      color: #aeb4b5;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons {
+      gap: 8px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons .rb-button {
+      min-height: 48px;
+      border-color: #f8f6f0;
+      background: #f8f6f0;
+      color: #0c0d0e;
+      font-size: 14px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-cta-buttons .rb-button:hover {
+      border-color: var(--rb-focus);
+      background: var(--rb-focus);
+      color: #0c0d0e;
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-menu {
+      border-color: #3c4143;
+      border-radius: 3px;
+      background: #f8f6f0;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+    }
+
+    #reelsbuddy-homepage-concept .rb-download-option:hover,
+    #reelsbuddy-homepage-concept .rb-download-option:focus-visible {
+      background: #e6e2da;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer {
+      grid-template-columns: 1.2fr repeat(3, 0.65fr);
+      gap: 40px;
+      padding: 48px max(32px, calc((100vw - 1160px) / 2));
+      border-top: 1px solid var(--rb-border-subtle);
+      background: #080909;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer p {
+      max-width: 250px;
+      color: #858c8e;
+      font-size: 13px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-col h3 {
+      margin-bottom: 13px;
+      color: var(--rb-footer-heading);
+      font-family: var(--rb-sans);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-col button,
+    #reelsbuddy-homepage-concept .rb-footer-col a {
+      min-height: 32px;
+      color: #c9cdcd;
+      font-size: 13px;
+    }
+
+    #reelsbuddy-homepage-concept .rb-footer-col button:hover,
+    #reelsbuddy-homepage-concept .rb-footer-col a:hover {
+      color: #f8f6f0;
+    }
+
+    #reelsbuddy-homepage-concept .rb-fade {
+      animation: rbCutFade 240ms ease both;
+    }
+
+    @keyframes rbCutFade {
+      from { opacity: 0.55; }
+      to { opacity: 1; }
+    }
+
+    #reelsbuddy-homepage-concept :is(a, button, input):focus-visible {
+      outline: 2px solid var(--rb-signal);
+      outline-offset: 3px;
+    }
+
+    #reelsbuddy-homepage-concept :is(.rb-download, .rb-hero-download, .rb-download-trigger, .rb-cta-buttons > .rb-button):focus-visible,
+    #reelsbuddy-homepage-concept :is(.rb-download, .rb-hero-download, .rb-download-trigger, .rb-cta-buttons > .rb-button):focus {
+      outline: 2px solid var(--rb-focus);
+      outline-offset: 3px;
+    }
+
+    #reelsbuddy-homepage-concept :is(#top, #formats, #studio, #showcase, #download) {
+      scroll-margin-top: 76px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #reelsbuddy-homepage-concept .rb-header,
+      #reelsbuddy-homepage-concept .rb-nav a::after,
+      #reelsbuddy-homepage-concept .rb-button,
+      #reelsbuddy-homepage-concept .rb-play-chip {
+        transition: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-fade {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 980px) {
+      #reelsbuddy-homepage-concept .rb-hero {
+        grid-template-columns: 1fr;
+        gap: 46px;
+        min-height: 0;
+        padding: 64px 24px 78px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-copy {
+        max-width: 760px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1 {
+        max-width: 760px;
+        font-size: 62px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        max-width: 760px;
+        font-size: 54px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-wall {
+        aspect-ratio: 2.05 / 1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section-head,
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-section-head,
+      #reelsbuddy-homepage-concept .rb-showcase .rb-section-head {
+        grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+        gap: 38px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-tabs {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: thin;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-tab {
+        flex: 0 0 auto;
+        min-width: max-content;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-stage,
+      #reelsbuddy-homepage-concept .rb-usecase-stage[data-case] {
+        min-height: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy {
+        padding: 38px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(2) {
+        border-right: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(-n + 2) {
+        border-bottom: 1px solid #303537;
+      }
+
+      #reelsbuddy-homepage-concept .rb-showcase-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:first-child {
+        grid-column: 1 / -1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:nth-child(2),
+      #reelsbuddy-homepage-concept .rb-work-card:nth-child(3) {
+        padding-top: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:nth-child(2) .rb-work-card-visual,
+      #reelsbuddy-homepage-concept .rb-work-card:nth-child(3) .rb-work-card-visual {
+        aspect-ratio: 16 / 11;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner {
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 42px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+        font-size: 52px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-cta-inner h2 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      #reelsbuddy-homepage-concept .rb-header {
+        top: 0;
+        min-height: 66px;
+        padding: 10px 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-mobile-nav.is-open {
+        top: 66px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero {
+        padding: 56px 22px 68px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1 {
+        font-size: 56px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 50px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-sub {
+        font-size: 16px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section,
+      #reelsbuddy-homepage-concept .rb-editor-section {
+        padding: 80px 22px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section-head,
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-section-head,
+      #reelsbuddy-homepage-concept .rb-showcase .rb-section-head {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section h2 {
+        font-size: 43px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-section h2 {
+        font-size: 39px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-stage,
+      #reelsbuddy-homepage-concept .rb-usecase-stage[data-case] {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy {
+        border-right: 0;
+        border-bottom: 1px solid #303436;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-visual-wrap {
+        min-height: 420px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-body {
+        grid-template-columns: 118px minmax(0, 1fr);
+      }
+
+      #reelsbuddy-homepage-concept .rb-chat {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-note-row {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-section {
+        padding: 84px 22px 92px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer {
+        grid-template-columns: 0.9fr 1.15fr 0.85fr;
+        padding: 42px 22px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #reelsbuddy-homepage-concept .rb-header {
+        top: 0;
+        min-height: 66px;
+        padding: 10px 16px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-logo-name {
+        font-size: 17px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-lang-switch button {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0 6px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-menu-button {
+        width: 44px;
+        height: 44px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-mobile-nav.is-open {
+        top: 64px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero {
+        gap: 28px;
+        padding: 43px 18px 36px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1 {
+        font-size: 44px;
+        line-height: 1;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 38px;
+        line-height: 1.13;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-sub {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.62;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-actions {
+        width: 100%;
+        max-width: none;
+        margin-top: 26px;
+        flex-direction: column;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-actions .rb-button {
+        width: 100%;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-downloads {
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-proof {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 0;
+        margin-top: 28px;
+        padding-top: 15px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-proof li {
+        min-height: 28px;
+        padding: 0 10px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-proof li:nth-child(3) {
+        grid-column: 1 / -1;
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-wall {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        aspect-ratio: 1.62 / 1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-tile:nth-child(n + 7) {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-tile:first-child {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-visual-meta {
+        padding-top: 9px;
+        font-size: 10px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section,
+      #reelsbuddy-homepage-concept .rb-editor-section {
+        padding: 70px 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section h2 {
+        font-size: 36px;
+        line-height: 1.06;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-section h2 {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-section-sub {
+        font-size: 15px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-tabs {
+        margin-right: -18px;
+        padding-right: 18px;
+        border-right: 0;
+        border-radius: 3px 0 0 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-tab {
+        min-height: 52px;
+        padding: 0 14px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy {
+        padding: 30px 24px 28px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-copy h3,
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-usecase-copy h3 {
+        margin-top: 22px;
+        font-size: 31px;
+        line-height: 1.12;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-usecase-copy h3 {
+        font-size: 27px;
+        line-height: 1.2;
+        text-wrap: pretty;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-description {
+        font-size: 15px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-visual-wrap {
+        min-height: 340px;
+        padding: 28px 20px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-usecase-frame--vertical {
+        width: min(72%, 240px);
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:nth-child(n) {
+        min-height: 0;
+        padding: 20px 17px 22px;
+        border-right: 0;
+        border-bottom: 1px solid #303537;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step:last-child {
+        border-bottom: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step-title {
+        margin-top: 18px;
+        font-size: 19px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-section .rb-workflow-step p {
+        font-size: 14px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-editor-body {
+        grid-template-columns: 1fr;
+        min-height: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-assets,
+      #reelsbuddy-homepage-concept .rb-chat {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-canvas {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 8px;
+        min-height: 0;
+        padding: 12px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--scene {
+        grid-column: 1 / -1;
+        grid-row: 1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--idea {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--script {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node--refs,
+      #reelsbuddy-homepage-concept .rb-flow-node--output,
+      #reelsbuddy-homepage-concept .rb-canvas-tools {
+        display: none;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node {
+        padding: 11px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node-head {
+        font-size: 10px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-node-body {
+        margin-top: 9px;
+        font-size: 12px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-flow-preview {
+        width: 100%;
+      }
+
+      #reelsbuddy-homepage-concept .rb-canvas-headline {
+        left: 16px;
+        right: 16px;
+        font-size: 20px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:first-child {
+        grid-column: auto;
+      }
+
+      #reelsbuddy-homepage-concept .rb-work-card:nth-child(2) .rb-work-card-visual,
+      #reelsbuddy-homepage-concept .rb-work-card:nth-child(3) .rb-work-card-visual {
+        aspect-ratio: 16 / 10;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-section {
+        padding: 72px 18px 82px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+        font-size: 43px;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-cta-inner h2 {
+        font-size: 38px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-panel p {
+        font-size: 14px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-buttons .rb-button {
+        min-height: 50px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 22px;
+        padding: 38px 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer-formats {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1 / -1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer-col:last-child {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 350px) {
+      #reelsbuddy-homepage-concept .rb-hero {
+        gap: 20px;
+        padding: 28px 14px 20px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1 {
+        font-size: 38px;
+        line-height: 0.98;
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 35px;
+        line-height: 1.1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-sub {
+        margin-top: 18px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-actions {
+        gap: 6px;
+        margin-top: 20px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-actions .rb-button {
+        min-height: 44px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-proof {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 20px;
+        padding-top: 12px;
+        font-size: 10px;
+        line-height: 1.35;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-proof li,
+      #reelsbuddy-homepage-concept .rb-hero-proof li:first-child,
+      #reelsbuddy-homepage-concept .rb-hero-proof li:nth-child(3) {
+        min-height: 0;
+        padding: 0 5px;
+        border-left: 1px solid #34383a;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-proof li:first-child {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-wall {
+        aspect-ratio: 2.2 / 1;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-visual-meta {
+        padding-top: 6px;
+        font-size: 9px;
+      }
+    }
+
+    @media (min-width: 981px) and (max-width: 1180px) {
+      #reelsbuddy-homepage-concept .rb-hero {
+        grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+        gap: 48px;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero h1,
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 54px;
+        line-height: 1.06;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      #reelsbuddy-homepage-concept .rb-hero {
+        padding-left: max(32px, calc((100vw - 1200px) / 2));
+        padding-right: max(32px, calc((100vw - 1200px) / 2));
+      }
+
+      #reelsbuddy-homepage-concept .rb-section-inner,
+      #reelsbuddy-homepage-concept .rb-cta-inner {
+        width: min(100%, 1200px);
+      }
+
+      #reelsbuddy-homepage-concept .rb-footer {
+        padding-left: max(32px, calc((100vw - 1200px) / 2));
+        padding-right: max(32px, calc((100vw - 1200px) / 2));
+      }
+
+      #reelsbuddy-homepage-concept[data-lang="zh"] .rb-hero h1 {
+        font-size: 64px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-hero-sub {
+        font-size: 18px;
+      }
+
+      #reelsbuddy-homepage-concept .rb-cta-inner h2 {
+        font-size: 60px;
       }
     }

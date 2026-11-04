@@ -3,34 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-tWHiI7OPf/nr62vgYT29qMX3UvNEizpxGDdoJRutTYs='; connect-src 'self'; form-action 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-IlZBM4oKN0CxNkDtP070QXuHxrgWBap450Xxnyhdkpk='; connect-src 'self'; form-action 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>ReelsBuddy - AI video studio</title>
-  <meta name="description" content="ReelsBuddy turns your ideas, references, product links or data into finished short videos, from the first script to the final export." />
-  <meta name="theme-color" content="#111210" />
+  <title>ReelsBuddy - From first idea to final cut</title>
+  <meta name="description" content="ReelsBuddy turns an idea, a link, or your footage into an editable short video." />
+  <meta name="theme-color" content="#0c0d0e" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon-180.png" />
   <link rel="manifest" href="./site.webmanifest" />
   <link rel="preload" href="./assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="./assets/reelsbuddy-mark-96.png" as="image" type="image/png" />
+  <link rel="preload" href="./assets/noto-sans-sc-subset.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="canonical" href="https://reels.playsout.com/" />
   <link rel="alternate" hreflang="en" href="https://reels.playsout.com/?lang=en" />
   <link rel="alternate" hreflang="zh-CN" href="https://reels.playsout.com/?lang=zh" />
   <link rel="alternate" hreflang="x-default" href="https://reels.playsout.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ReelsBuddy - From an idea to a finished creation." />
-  <meta property="og:description" content="An AI video studio for individuals. Turn ideas and assets into finished short videos." />
+  <meta property="og:title" content="ReelsBuddy - From first idea to final cut." />
+  <meta property="og:description" content="Turn an idea, a link, or your footage into an editable short video." />
   <meta property="og:url" content="https://reels.playsout.com/" />
   <meta property="og:image" content="https://reels.playsout.com/assets/og-reelsbuddy.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ReelsBuddy - From an idea to a finished creation." />
+  <meta property="og:image:alt" content="ReelsBuddy - From first idea to final cut." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="ReelsBuddy" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ReelsBuddy - From an idea to a finished creation." />
-  <meta name="twitter:description" content="An AI video studio for individuals. Turn ideas and assets into finished short videos." />
+  <meta name="twitter:title" content="ReelsBuddy - From first idea to final cut." />
+  <meta name="twitter:description" content="Turn an idea, a link, or your footage into an editable short video." />
   <meta name="twitter:image" content="https://reels.playsout.com/assets/og-reelsbuddy.jpg" />
   <link rel="stylesheet" href="./styles.css" />
   <script type="application/ld+json">
@@ -40,7 +40,7 @@
       "name": "ReelsBuddy",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "macOS, Windows",
-      "description": "An AI video studio for turning ideas into finished short videos.",
+      "description": "An editable desktop studio for turning ideas into finished short videos.",
       "url": "https://reels.playsout.com/"
     }
   </script>
@@ -51,7 +51,6 @@
   <div class="rb-page">
     <header class="rb-header">
       <a class="rb-logo" href="#top" aria-label="ReelsBuddy home" data-i18n-aria="homeLabel">
-        <img class="rb-logo-mark" src="./assets/reelsbuddy-mark-96.png" alt="" width="34" height="34" decoding="async" />
         <span class="rb-logo-copy">
           <span class="rb-logo-name">ReelsBuddy</span>
           <span class="rb-logo-by" data-i18n="brandBy">by Playsout</span>
@@ -72,7 +71,11 @@
           <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-download"></use></svg>
         </a>
         <button class="rb-menu-button" id="rb-menu-button" type="button" aria-label="Open menu" aria-expanded="false">
-          <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-menu"></use></svg>
+          <svg class="rb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
         </button>
       </div>
     </header>
@@ -84,49 +87,66 @@
 
     <main id="main-content">
     <section class="rb-hero" id="top" aria-labelledby="rb-hero-title">
-      <div class="rb-hero-wall" aria-hidden="true">
-        <div class="rb-hero-tile rb-thumb rb-thumb--brand"><span class="rb-bottle"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--product"><span class="rb-product-screen"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--data">
-          <span class="rb-data-plot">
-            <span class="rb-bar-29"></span>
-            <span class="rb-bar-58"></span>
-            <span class="rb-bar-44"></span>
-            <span class="rb-bar-82"></span>
-            <span class="rb-bar-68"></span>
-          </span>
-        </div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--social"><span class="rb-phone"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--science"><span class="rb-orbit"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--drama"><span class="rb-drama-window"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--science"><span class="rb-orbit"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--drama"><span class="rb-drama-window"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--brand"><span class="rb-bottle"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--data">
-          <span class="rb-data-plot">
-            <span class="rb-bar-57"></span>
-            <span class="rb-bar-26"></span>
-            <span class="rb-bar-74"></span>
-            <span class="rb-bar-42"></span>
-            <span class="rb-bar-89"></span>
-          </span>
-        </div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--social"><span class="rb-phone"></span></div>
-        <div class="rb-hero-tile rb-thumb rb-thumb--product"><span class="rb-product-screen"></span></div>
-      </div>
       <div class="rb-hero-copy">
-        <p class="rb-hero-eyebrow" data-i18n="heroEyebrow">The AI video studio for individuals</p>
-        <h1 id="rb-hero-title" data-i18n="heroTitle">From an idea to a finished creation.</h1>
-        <p class="rb-hero-sub" data-i18n="heroSub">ReelsBuddy turns your ideas, references, product links or data into a finished short video, from the first script to the last export.</p>
+        <h1 id="rb-hero-title" data-i18n="heroTitle">From first idea to final cut.</h1>
+        <p class="rb-hero-sub" data-i18n="heroSub">Turn a line, a link, or your footage into an editable short video.</p>
         <div class="rb-hero-actions">
-          <a class="rb-button rb-button--primary" href="#download">
-            <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-download"></use></svg>
-            <span data-i18n="heroDownload">Download app</span>
-          </a>
-          <a class="rb-button rb-button--outline" href="#studio">
-            <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>
+          <div class="rb-hero-downloads">
+            <div class="rb-download-choice">
+              <button class="rb-button rb-hero-download" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="rb-hero-mac-download-menu" data-download-menu-toggle>
+                <span class="rb-platform-label">
+                  <svg class="rb-platform-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M17.05 12.54c-.03-2.58 2.11-3.82 2.2-3.88-1.2-1.75-3.06-1.99-3.73-2.02-1.59-.16-3.1.94-3.91.94-.8 0-2.05-.92-3.37-.9-1.74.03-3.34 1.01-4.23 2.56-1.8 3.12-.46 7.74 1.29 10.28.85 1.24 1.87 2.63 3.2 2.58 1.28-.05 1.77-.83 3.32-.83 1.55 0 1.99.83 3.34.8 1.38-.02 2.25-1.25 3.09-2.5.98-1.43 1.38-2.82 1.4-2.89-.03-.01-2.68-1.03-2.7-4.14ZM14.49 4.89c.71-.86 1.19-2.05 1.06-3.24-1.02.04-2.25.68-2.98 1.54-.65.75-1.23 1.97-1.08 3.13 1.14.09 2.3-.58 3-1.43Z"/>
+                  </svg>
+                  <span data-i18n="downloadMac">Download Mac</span>
+                </span>
+                <span class="rb-download-chevron" aria-hidden="true"></span>
+              </button>
+              <div class="rb-download-menu" id="rb-hero-mac-download-menu" aria-label="Choose a Mac version" data-i18n-aria="macVersionMenuLabel" hidden>
+                <button class="rb-download-option" type="button" data-download-variant="macAppleSilicon">
+                  <span class="rb-download-option-copy">
+                    <strong data-i18n="macAppleSilicon">Mac (M-series chip)</strong>
+                    <small data-i18n="macAppleSiliconHint">M1-M5 · macOS 13+</small>
+                  </span>
+                  <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-download"></use></svg>
+                </button>
+                <button class="rb-download-option" type="button" data-download-variant="macIntel">
+                  <span class="rb-download-option-copy">
+                    <strong data-i18n="macIntel">Mac (older Intel chip)</strong>
+                    <small data-i18n="macIntelHint">Intel processor · macOS 13+</small>
+                  </span>
+                  <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-download"></use></svg>
+                </button>
+              </div>
+            </div>
+            <button class="rb-button rb-hero-download" type="button" data-download-platform="windows">
+              <span class="rb-platform-label">
+                <svg class="rb-platform-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M2.5 4.1 10.4 3v8.1H2.5V4.1Zm8.7-1.25L21.5 1.5v9.6h-10.3V2.85ZM2.5 11.9h7.9v8.1l-7.9-1.1v-7Zm8.7 0h10.3v9.6l-10.3-1.35V11.9Z"/>
+                </svg>
+                <span data-i18n="downloadWindows">Download Windows</span>
+              </span>
+            </button>
+          </div>
+          <a class="rb-hero-demo-link" href="#studio">
             <span data-i18n="heroDemo">See how it works</span>
           </a>
+        </div>
+        <ul class="rb-hero-proof" aria-label="Product facts" data-i18n-aria="heroProofLabel">
+          <li data-i18n="proofDesktop">Mac and Windows</li>
+          <li data-i18n="proofEditable">Editable canvas</li>
+          <li data-i18n="proofRatios">AI Agent workflow</li>
+        </ul>
+      </div>
+      <div class="rb-hero-visual">
+        <div class="rb-hero-wall rb-hero-wall--video" aria-hidden="true">
+          <video class="rb-hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="./assets/banner.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="rb-hero-visual-meta">
+          <span class="rb-concept-label"><span class="rb-rec-dot" aria-hidden="true"></span><span data-i18n="conceptPreview">Concept preview</span></span>
+          <span class="rb-ratio-meta">16:9 / 9:16 / 1:1</span>
         </div>
       </div>
     </section>
@@ -135,10 +155,9 @@
       <div class="rb-section-inner">
         <div class="rb-section-head">
           <div>
-            <p class="rb-kicker" data-i18n="formatsKicker">Built for every kind of story</p>
             <h2 id="rb-usecases-title" data-i18n="formatsTitle">Every format you want to create.</h2>
           </div>
-          <p class="rb-section-sub" data-i18n="formatsSub">Start from a proven creative shape, then let the Agent adapt the script, visuals and edit to your idea.</p>
+          <p class="rb-section-sub" data-i18n="formatsSub">Start from a proven creative shape, then adapt the story and edit to your idea.</p>
         </div>
 
         <div class="rb-usecase-tabs" role="tablist" aria-label="Video formats" data-i18n-aria="formatsGroupLabel">
@@ -185,8 +204,7 @@
           <div class="rb-usecase-visual-wrap">
             <div class="rb-usecase-frame rb-usecase-frame--vertical" id="rb-usecase-frame">
               <span class="rb-video-chip">
-                <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>
-                00:42
+                <span class="rb-video-duration">--:--</span>
               </span>
               <div class="rb-thumb rb-thumb--drama" id="rb-usecase-thumb">
                 <span class="rb-drama-window"></span>
@@ -194,6 +212,22 @@
               <div class="rb-video-title">
                 The Last Train Home
                 <small>Episode 01 / Short drama</small>
+              </div>
+              <div class="rb-video-controls">
+                <button class="rb-video-toggle" type="button" aria-label="Pause video">
+                  <svg class="rb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                </button>
+                <input class="rb-video-progress" type="range" min="0" max="1" step="0.01" value="0" aria-label="Video progress" />
+                <span class="rb-video-time"><span class="rb-video-current">00:00</span> / <span class="rb-video-total">--:--</span></span>
+                <button class="rb-video-mute" type="button" aria-label="Unmute video">
+                  <svg class="rb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+                    <line x1="18" x2="22" y1="9" y2="15"></line>
+                    <line x1="22" x2="18" y1="9" y2="15"></line>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -205,7 +239,6 @@
       <div class="rb-section-inner">
         <div class="rb-section-head">
           <div>
-            <p class="rb-kicker" data-i18n="editorKicker">Agentic by default. Editorial by design.</p>
             <h2 id="rb-editor-title" data-i18n="editorTitle">A studio you can actually direct.</h2>
           </div>
           <p class="rb-section-sub" data-i18n="editorSub">The Agent handles the assembly. You keep the judgment: the hook, the brand, the pacing, the final frame.</p>
@@ -314,41 +347,43 @@
       <div class="rb-section-inner">
         <div class="rb-section-head">
           <div>
-            <p class="rb-kicker" data-i18n="showcaseKicker">Made to share</p>
-            <h2 id="rb-showcase-title" data-i18n="showcaseTitle">For your next story. And your next ad.</h2>
+            <h2 id="rb-showcase-title" data-i18n="showcaseTitle">A look at what you can make.</h2>
           </div>
-          <p class="rb-section-sub" data-i18n="showcaseSub">Give every performance a frame and every selling point a spotlight. Explore finished work made with ReelsBuddy.</p>
+          <p class="rb-section-sub" data-i18n="showcaseSub">Concept previews of brand films, social cuts and data stories. Real work will replace these at launch.</p>
         </div>
         <div class="rb-showcase-grid">
           <article class="rb-work-card">
             <div class="rb-work-card-visual">
               <span class="rb-video-chip"><svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>00:28</span>
+              <span class="rb-concept-chip" data-i18n="conceptPreview">Concept preview</span>
               <div class="rb-thumb rb-thumb--brand"><span class="rb-bottle"></span></div>
               <button class="rb-play-chip" type="button" aria-label="Play Solace / New ritual" data-i18n-aria="playCard1Label">
                 <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>
               </button>
             </div>
             <div class="rb-work-card-meta">
-              <div><h3 data-i18n="showcaseCard1Title">Solace / New ritual</h3><p data-i18n="showcaseCard1Meta">Brand promo / 16:9</p></div>
+              <div><h3 data-i18n="showcaseCard1Title">Solace / New ritual</h3><p data-i18n="showcaseCard1Meta">Concept / Brand promo / 16:9</p></div>
               <span class="rb-ratio">4K</span>
             </div>
           </article>
           <article class="rb-work-card">
             <div class="rb-work-card-visual">
               <span class="rb-video-chip"><svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>00:19</span>
+              <span class="rb-concept-chip" data-i18n="conceptPreview">Concept preview</span>
               <div class="rb-thumb rb-thumb--social"><span class="rb-phone"></span></div>
               <button class="rb-play-chip" type="button" aria-label="Play Move / Summer drop" data-i18n-aria="playCard2Label">
                 <svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>
               </button>
             </div>
             <div class="rb-work-card-meta">
-              <div><h3 data-i18n="showcaseCard2Title">Move / Summer drop</h3><p data-i18n="showcaseCard2Meta">Social ad / 9:16</p></div>
+              <div><h3 data-i18n="showcaseCard2Title">Move / Summer drop</h3><p data-i18n="showcaseCard2Meta">Concept / Social ad / 9:16</p></div>
               <span class="rb-ratio">9:16</span>
             </div>
           </article>
           <article class="rb-work-card">
             <div class="rb-work-card-visual">
               <span class="rb-video-chip"><svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-play"></use></svg>00:54</span>
+              <span class="rb-concept-chip" data-i18n="conceptPreview">Concept preview</span>
               <div class="rb-thumb rb-thumb--data">
                 <span class="rb-data-plot">
                   <span class="rb-bar-32"></span>
@@ -363,7 +398,7 @@
               </button>
             </div>
             <div class="rb-work-card-meta">
-              <div><h3 data-i18n="showcaseCard3Title">The access gap</h3><p data-i18n="showcaseCard3Meta">Data story / 16:9</p></div>
+              <div><h3 data-i18n="showcaseCard3Title">The access gap</h3><p data-i18n="showcaseCard3Meta">Concept / Data story / 16:9</p></div>
               <span class="rb-ratio">16:9</span>
             </div>
           </article>
@@ -422,7 +457,6 @@
     <footer class="rb-footer">
       <div>
         <a class="rb-logo" href="#top" aria-label="ReelsBuddy home" data-i18n-aria="homeLabel">
-          <img class="rb-logo-mark" src="./assets/reelsbuddy-mark-96.png" alt="" width="30" height="30" decoding="async" />
           <span class="rb-logo-copy">
             <span class="rb-logo-name">ReelsBuddy</span>
             <span class="rb-logo-by" data-i18n="brandBy">by Playsout</span>

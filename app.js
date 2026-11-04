@@ -10,6 +10,7 @@
       let activeWorkflowStep = 'direction';
       let isMenuOpen = false;
       let statusTimer = null;
+      const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
       const translations = {
         en: {
@@ -24,14 +25,21 @@
           navShowcase: 'Showcase',
           downloadApp: 'Download app',
           downloadShort: 'Download',
-          heroEyebrow: 'The AI video studio for individuals',
-          heroTitle: 'From an idea to a finished creation.',
-          heroSub: 'ReelsBuddy turns your ideas, references, product links or data into a finished short video, from the first script to the last export.',
-          heroDownload: 'Download app',
+          heroTitle: 'From first idea to final cut.',
+          heroSub: 'Turn a line, a link, or your footage into an editable short video.',
           heroDemo: 'See how it works',
-          formatsKicker: 'Built for every kind of story',
+          heroProofLabel: 'Product facts',
+          proofDesktop: 'Mac and Windows',
+          proofEditable: 'Editable canvas',
+          proofRatios: 'AI Agent workflow',
+          conceptPreview: 'Concept preview',
+          videoPlay: 'Play video',
+          videoPause: 'Pause video',
+          videoProgress: 'Video progress',
+          videoMute: 'Mute video',
+          videoUnmute: 'Unmute video',
           formatsTitle: 'Every format you want to create.',
-          formatsSub: 'Start from a proven creative shape, then let the Agent adapt the script, visuals and edit to your idea.',
+          formatsSub: 'Start from a proven creative shape, then adapt the story and edit to your idea.',
           formatsGroupLabel: 'Video formats',
           formatDrama: 'Short drama',
           formatBrand: 'Brand promo',
@@ -41,19 +49,18 @@
           formatScience: 'Science explainer',
           exampleBrief: 'Example idea',
           workflowGroupLabel: 'Workflow steps',
-          stepDirection: '01 / DIRECTION',
+          stepDirection: '01 Direction',
           stepDirectionTitle: 'Start with intent',
           stepDirectionBody: 'Bring an idea, a page, a file or a dataset. ReelsBuddy asks the questions that bring it into focus.',
-          stepScript: '02 / SCRIPT',
+          stepScript: '02 Script',
           stepScriptTitle: 'See the story first',
           stepScriptBody: 'Review the treatment, script and storyboard before a single generated frame is committed.',
-          stepProduction: '03 / PRODUCTION',
+          stepProduction: '03 Production',
           stepProductionTitle: 'Build every layer',
           stepProductionBody: 'Generate visuals, motion, voice and captions, then arrange the whole piece on a visual canvas.',
-          stepDelivery: '04 / DELIVERY',
+          stepDelivery: '04 Delivery',
           stepDeliveryTitle: 'Finish the cut',
           stepDeliveryBody: 'Leave scene-level notes, protect the brand and export every format from the same source project.',
-          editorKicker: 'Agentic by default. Editorial by design.',
           editorTitle: 'A studio you can actually direct.',
           editorSub: 'The Agent handles the assembly. You keep the judgment: the hook, the brand, the pacing, the final frame.',
           editorAssets: 'Assets',
@@ -66,20 +73,19 @@
           agentConversationLabel: 'Agent conversation',
           editorAgent: 'Agent',
           editorStudio: 'Studio',
-          showcaseKicker: 'Made to share',
-          showcaseTitle: 'For your next story. And your next ad.',
-          showcaseSub: 'Give every performance a frame and every selling point a spotlight. Explore finished work made with ReelsBuddy.',
+          showcaseTitle: 'A look at what you can make.',
+          showcaseSub: 'Concept previews of brand films, social cuts and data stories. Real work will replace these at launch.',
           showcaseCard1Title: 'Solace / New ritual',
-          showcaseCard1Meta: 'Brand promo / 16:9',
+          showcaseCard1Meta: 'Concept / Brand promo / 16:9',
           showcaseCard2Title: 'Move / Summer drop',
-          showcaseCard2Meta: 'Social ad / 9:16',
+          showcaseCard2Meta: 'Concept / Social ad / 9:16',
           showcaseCard3Title: 'The access gap',
-          showcaseCard3Meta: 'Data story / 16:9',
-          playCard1Label: 'Play Solace / New ritual',
-          playCard2Label: 'Play Move / Summer drop',
-          playCard3Label: 'Play The access gap',
+          showcaseCard3Meta: 'Concept / Data story / 16:9',
+          playCard1Label: 'Preview Solace / New ritual',
+          playCard2Label: 'Preview Move / Summer drop',
+          playCard3Label: 'Preview The access gap',
           ctaTitle: 'Start with your next idea.',
-          ctaBody: 'Bring the idea. ReelsBuddy will help shape the story, build the scenes and get it ready to publish.',
+          ctaBody: 'Bring the idea. ReelsBuddy helps shape the story, build the scenes and finish the cut.',
           downloadMac: 'Download Mac',
           downloadWindows: 'Download Windows',
           macVersionMenuLabel: 'Choose a Mac version',
@@ -100,12 +106,12 @@
           downloadUnavailableMacAppleSilicon: 'The Apple silicon version is being prepared. Please check back soon.',
           downloadUnavailableMacIntel: 'The Intel Mac version is being prepared. Please check back soon.',
           downloadUnavailableWindows: 'The Windows download is being prepared. Please check back soon.',
-          showcaseUnavailable: 'The full showcase video is being prepared. Check back soon.',
+          showcaseUnavailable: 'This is a concept preview. Playable work is coming soon.',
           documentTitle: 'ReelsBuddy - AI video studio',
-          metaDescription: 'An AI video studio for individuals. Turn ideas, references and data into finished short videos.',
-          ogTitle: 'ReelsBuddy - From an idea to a finished creation.',
-          ogDescription: 'Turn ideas and assets into finished short videos with one editable AI production canvas.',
-          ogImageAlt: 'ReelsBuddy brand card: from an idea to a finished creation.'
+          metaDescription: 'Turn an idea, a link, or your footage into an editable short video with ReelsBuddy.',
+          ogTitle: 'ReelsBuddy - From first idea to final cut.',
+          ogDescription: 'Turn an idea, a link, or your footage into an editable short video.',
+          ogImageAlt: 'ReelsBuddy brand card: from first idea to final cut.'
         },
         zh: {
           brandBy: '由 Playsout 出品',
@@ -116,17 +122,24 @@
           skipToContent: '跳到主要内容',
           navFormats: '视频类型',
           navWorkflow: '工作流',
-          navShowcase: '作品',
+          navShowcase: '展示',
           downloadApp: '下载应用',
           downloadShort: '下载',
-          heroEyebrow: '面向个人的 AI 视频工作室',
-          heroTitle: '从一个创意，到一部创作。',
-          heroSub: 'ReelsBuddy 把你的想法、参考资料、产品链接或数据转化为一支完整的短视频，从脚本、分镜一直完成到最终导出。',
-          heroDownload: '下载应用',
+          heroTitle: '从一念，到成片。',
+          heroSub: '一句创意、一个链接或一段素材，变成可继续剪辑的完整短视频。',
           heroDemo: '查看工作方式',
-          formatsKicker: '为每一种故事而设计',
+          heroProofLabel: '产品信息',
+          proofDesktop: '支持 Mac 与 Windows',
+          proofEditable: '可编辑画布',
+          proofRatios: 'AI Agent 工作流',
+          conceptPreview: '概念预览',
+          videoPlay: '播放视频',
+          videoPause: '暂停视频',
+          videoProgress: '视频进度',
+          videoMute: '静音',
+          videoUnmute: '取消静音',
           formatsTitle: '你想创作的每一种视频。',
-          formatsSub: '从成熟的创作结构开始，让智能体围绕你的创意调整脚本、画面与剪辑。',
+          formatsSub: '从成熟的创作结构开始，再围绕你的创意调整脚本、画面与剪辑。',
           formatsGroupLabel: '视频类型',
           formatDrama: '短剧',
           formatBrand: '品牌宣传',
@@ -136,20 +149,19 @@
           formatScience: '科普讲解',
           exampleBrief: '创意示例',
           workflowGroupLabel: '制作流程',
-          stepDirection: '01 / 方向',
+          stepDirection: '01 方向',
           stepDirectionTitle: '从意图开始',
           stepDirectionBody: '带入一个创意、页面、文件或数据集。ReelsBuddy 会追问，帮助你把想法变得清晰。',
-          stepScript: '02 / 脚本',
+          stepScript: '02 脚本',
           stepScriptTitle: '先看到故事',
           stepScriptBody: '在正式生成任何画面前，先审核创意阐述、脚本和分镜。',
-          stepProduction: '03 / 制作',
+          stepProduction: '03 制作',
           stepProductionTitle: '构建每一层',
           stepProductionBody: '生成画面、动效、配音与字幕，再在可视化画布上完成整体编排。',
-          stepDelivery: '04 / 交付',
+          stepDelivery: '04 交付',
           stepDeliveryTitle: '完成终剪',
           stepDeliveryBody: '添加逐镜头意见，保护品牌一致性，并从同一项目导出所有画幅。',
-          editorKicker: '默认智能，专业可控。',
-          editorTitle: '一个真正能指挥的创作工作室。',
+          editorTitle: '你指挥，智能体执行。',
           editorSub: '智能体负责组装，你负责判断：开场钩子、品牌调性、节奏和最后一帧。',
           editorAssets: '素材',
           assetLibraryLabel: '素材库',
@@ -161,20 +173,19 @@
           agentConversationLabel: '智能体对话',
           editorAgent: '智能体',
           editorStudio: '工作室',
-          showcaseKicker: '为分享而生',
-          showcaseTitle: '为你的下一个故事，下一条广告而来。',
-          showcaseSub: '让表演有画面，让卖点被看见。看看 ReelsBuddy 创作的真实作品。',
+          showcaseTitle: '看看你能创作什么。',
+          showcaseSub: '这里展示品牌短片、社媒切条和数据故事的创作方向。正式上线后将替换为真实作品。',
           showcaseCard1Title: 'Solace / 新仪式',
-          showcaseCard1Meta: '品牌宣传 / 16:9',
+          showcaseCard1Meta: '概念预览 / 品牌宣传 / 16:9',
           showcaseCard2Title: 'Move / 夏日系列',
-          showcaseCard2Meta: '社媒广告 / 9:16',
+          showcaseCard2Meta: '概念预览 / 社媒广告 / 9:16',
           showcaseCard3Title: '差距在哪里',
-          showcaseCard3Meta: '数据可视化 / 16:9',
-          playCard1Label: '播放 Solace / 新仪式',
-          playCard2Label: '播放 Move / 夏日系列',
-          playCard3Label: '播放 差距在哪里',
+          showcaseCard3Meta: '概念预览 / 数据可视化 / 16:9',
+          playCard1Label: '预览 Solace / 新仪式',
+          playCard2Label: '预览 Move / 夏日系列',
+          playCard3Label: '预览 差距在哪里',
           ctaTitle: '从下一个创意开始。',
-          ctaBody: '带上想法。ReelsBuddy 会帮你梳理故事、构建场景，并完成发布前的准备。',
+          ctaBody: '带上想法。ReelsBuddy 帮你梳理故事、构建场景，完成最后一版剪辑。',
           downloadMac: '下载 Mac 版',
           downloadWindows: '下载 Windows 版',
           macVersionMenuLabel: '选择 Mac 版本',
@@ -195,12 +206,12 @@
           downloadUnavailableMacAppleSilicon: 'Apple 芯片版本正在准备中，请稍后回来查看。',
           downloadUnavailableMacIntel: 'Intel Mac 版本正在准备中，请稍后回来查看。',
           downloadUnavailableWindows: 'Windows 版本正在准备中，请稍后回来查看。',
-          showcaseUnavailable: '作品完整视频正在准备中，请稍后回来查看。',
+          showcaseUnavailable: '当前为概念预览，可播放作品正在准备中。',
           documentTitle: 'ReelsBuddy - AI 视频工作室',
-          metaDescription: '面向个人的 AI 视频工作室，把创意、参考资料和数据转化为完整短视频。',
-          ogTitle: 'ReelsBuddy - 从一个创意，到一部创作。',
-          ogDescription: '用一张可编辑的 AI 创作画布，把想法和素材变成完整短视频。',
-          ogImageAlt: 'ReelsBuddy 品牌分享卡：从一个创意，到一部创作。'
+          metaDescription: '把一句创意、一个链接或一段素材，变成可继续剪辑的完整短视频。',
+          ogTitle: 'ReelsBuddy - 从一念，到成片。',
+          ogDescription: '把一句创意、一个链接或一段素材，变成可继续剪辑的完整短视频。',
+          ogImageAlt: 'ReelsBuddy 品牌分享卡：从一念，到成片。'
         }
       };
 
@@ -209,6 +220,7 @@
           thumb: 'rb-thumb--drama',
           frame: 'rb-usecase-frame--vertical',
           scene: 'rb-drama-window',
+          video: './assets/01.mp4',
           copy: {
             en: {
               index: 'Format 01 / 06',
@@ -221,7 +233,7 @@
             },
             zh: {
               index: '类型 01 / 06',
-              title: '把一句设定，发展成可以连续追看的剧集。',
+              title: '把一句设定，做成一部短剧。',
               description: '塑造角色、安排叙事节拍，用镜头驱动的故事让观众持续想看下一集。',
               brief: '一封没有署名的信，让陌生人回到海边小镇。',
               specs: ['9:16', '30-90 秒', '角色一致性'],
@@ -234,6 +246,7 @@
           thumb: 'rb-thumb--brand',
           frame: '',
           scene: 'rb-bottle',
+          video: './assets/02.mp4',
           copy: {
             en: {
               index: 'Format 02 / 06',
@@ -246,7 +259,7 @@
             },
             zh: {
               index: '类型 02 / 06',
-              title: '围绕一个清晰的创意，构建完整宣传活动。',
+              title: '围绕一个清晰创意，做完整宣传片。',
               description: '把品牌洞察变成一支完整的发布短片，让视觉语言、节奏和产品时刻协同工作。',
               brief: '为一款低调奢华的香水做发布。氛围平静、电影感，无旁白。',
               specs: ['16:9', '15-60 秒', '品牌套件'],
@@ -259,6 +272,7 @@
           thumb: 'rb-thumb--product',
           frame: '',
           scene: 'rb-product-screen',
+          video: './assets/03.mp4',
           copy: {
             en: {
               index: 'Format 03 / 06',
@@ -271,7 +285,7 @@
             },
             zh: {
               index: '类型 03 / 06',
-              title: '把产品讲清楚，不必拖泥带水。',
+              title: '把产品讲清楚，别绕弯。',
               description: '通过界面动效、讲解镜头和有说服力的旁白，把产品界面、价值与证明串联起来。',
               brief: '用 40 秒讲解我们的全新数据分析面板，保持实用。',
               specs: ['16:9', '20-60 秒', '界面动效'],
@@ -284,6 +298,7 @@
           thumb: 'rb-thumb--data',
           frame: '',
           scene: 'rb-data-plot',
+          video: './assets/04.mp4',
           copy: {
             en: {
               index: 'Format 04 / 06',
@@ -309,6 +324,7 @@
           thumb: 'rb-thumb--social',
           frame: 'rb-usecase-frame--vertical',
           scene: 'rb-phone',
+          video: './assets/05.mp4',
           copy: {
             en: {
               index: 'Format 05 / 06',
@@ -334,6 +350,7 @@
           thumb: 'rb-thumb--science',
           frame: '',
           scene: 'rb-orbit',
+          video: './assets/06.mp4',
           copy: {
             en: {
               index: 'Format 06 / 06',
@@ -512,11 +529,97 @@
       const index = document.getElementById('rb-usecase-index');
       const specs = document.getElementById('rb-usecase-specs');
       const videoTitle = root.querySelector('.rb-video-title');
+      const videoDuration = root.querySelector('.rb-video-duration');
+      const videoToggle = root.querySelector('.rb-video-toggle');
+      const videoMute = root.querySelector('.rb-video-mute');
+      const videoProgress = root.querySelector('.rb-video-progress');
+      const videoCurrentTime = root.querySelector('.rb-video-current');
+      const videoTotalTime = root.querySelector('.rb-video-total');
       const panel = document.getElementById('rb-usecase-panel');
       const editorShell = document.getElementById('rb-workflow-preview');
 
       function renderScene(markup) {
         return `<span class="${markup}"></span>`;
+      }
+
+      function formatDuration(seconds) {
+        if (!Number.isFinite(seconds)) return '--:--';
+        const totalSeconds = Math.max(0, Math.round(seconds));
+        const minutes = Math.floor(totalSeconds / 60);
+        const remainder = String(totalSeconds % 60).padStart(2, '0');
+        return `${String(minutes).padStart(2, '0')}:${remainder}`;
+      }
+
+      function videoPlaybackIconMarkup(paused) {
+        const icon = paused
+          ? '<polygon points="6 3 20 12 6 21 6 3"></polygon>'
+          : '<rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect>';
+        return `<svg class="rb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${icon}</svg>`;
+      }
+
+      function videoMuteIconMarkup(muted) {
+        const slash = muted ? '<line x1="18" x2="22" y1="9" y2="15"></line><line x1="22" x2="18" y1="9" y2="15"></line>' : '<path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19 6a9 9 0 0 1 0 12"></path>';
+        return `<svg class="rb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4V5Z"></path>${slash}</svg>`;
+      }
+
+      function syncVideoPlayback(video) {
+        if (!video) return;
+        if (reducedMotionQuery.matches) {
+          video.pause();
+          return;
+        }
+        video.play().catch(() => {});
+      }
+
+      function updateVideoControls(video) {
+        const paused = !video || video.paused;
+        const muted = !video || video.muted;
+        const duration = video && Number.isFinite(video.duration) ? video.duration : 0;
+        const currentTime = video && Number.isFinite(video.currentTime) ? video.currentTime : 0;
+        const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+
+        if (videoToggle) {
+          videoToggle.disabled = !video;
+          videoToggle.setAttribute('aria-label', translations[currentLanguage][paused ? 'videoPlay' : 'videoPause']);
+          const state = paused ? 'paused' : 'playing';
+          if (videoToggle.dataset.state !== state) {
+            videoToggle.dataset.state = state;
+            videoToggle.innerHTML = videoPlaybackIconMarkup(paused);
+          }
+        }
+        if (videoMute) {
+          videoMute.disabled = !video;
+          videoMute.setAttribute('aria-label', translations[currentLanguage][muted ? 'videoUnmute' : 'videoMute']);
+          const state = muted ? 'muted' : 'audible';
+          if (videoMute.dataset.state !== state) {
+            videoMute.dataset.state = state;
+            videoMute.innerHTML = videoMuteIconMarkup(muted);
+          }
+        }
+        if (videoProgress) {
+          videoProgress.disabled = !video;
+          videoProgress.max = String(duration || 1);
+          videoProgress.value = String(currentTime);
+          videoProgress.style.setProperty('--rb-video-progress', `${progress}%`);
+          videoProgress.setAttribute('aria-label', translations[currentLanguage].videoProgress);
+          videoProgress.setAttribute('aria-valuetext', formatDuration(currentTime));
+        }
+        if (videoCurrentTime) videoCurrentTime.textContent = formatDuration(currentTime);
+        if (videoTotalTime) videoTotalTime.textContent = formatDuration(duration);
+        if (videoDuration) videoDuration.textContent = formatDuration(duration);
+      }
+
+      function bindVideoControls(video) {
+        if (!video) return;
+        video.muted = true;
+        const update = () => updateVideoControls(video);
+        video.addEventListener('loadedmetadata', update, { once: true });
+        video.addEventListener('timeupdate', update);
+        video.addEventListener('play', update);
+        video.addEventListener('pause', update);
+        video.addEventListener('seeked', update);
+        video.addEventListener('volumechange', update);
+        updateVideoControls(video);
       }
 
       function setUseCase(key) {
@@ -532,7 +635,19 @@
         panel.setAttribute('aria-labelledby', activeTab.id);
         panel.dataset.case = key;
         thumb.className = `rb-thumb ${caseData.thumb}`;
-        thumb.innerHTML = renderScene(caseData.scene);
+        if (caseData.video && thumb.dataset.video !== caseData.video) {
+          thumb.querySelector('video')?.pause();
+          thumb.innerHTML = `<video class="rb-usecase-video" autoplay muted loop playsinline preload="auto"><source src="${caseData.video}" type="video/mp4"></video>`;
+          thumb.dataset.video = caseData.video;
+          const previewVideo = thumb.querySelector('video');
+          bindVideoControls(previewVideo);
+          syncVideoPlayback(previewVideo);
+        } else if (!caseData.video) {
+          thumb.querySelector('video')?.pause();
+          delete thumb.dataset.video;
+          thumb.innerHTML = renderScene(caseData.scene);
+        }
+        updateVideoControls(thumb.querySelector('video'));
         frame.className = `rb-usecase-frame ${caseData.frame}`.trim();
         title.textContent = item.title;
         description.textContent = item.description;
@@ -544,6 +659,38 @@
         void panel.offsetWidth;
         panel.classList.add('rb-fade');
       }
+
+      videoToggle?.addEventListener('click', () => {
+        const video = thumb.querySelector('video');
+        if (!video) return;
+        if (video.paused) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+        updateVideoControls(video);
+      });
+
+      videoMute?.addEventListener('click', () => {
+        const video = thumb.querySelector('video');
+        if (!video) return;
+        video.muted = !video.muted;
+        updateVideoControls(video);
+      });
+
+      videoProgress?.addEventListener('input', () => {
+        const video = thumb.querySelector('video');
+        if (!video || !Number.isFinite(video.duration)) return;
+        const seekTime = Number(videoProgress.value);
+        const progress = video.duration > 0 ? (seekTime / video.duration) * 100 : 0;
+        if (typeof video.fastSeek === 'function') {
+          video.fastSeek(seekTime);
+        } else {
+          video.currentTime = seekTime;
+        }
+        videoProgress.style.setProperty('--rb-video-progress', `${progress}%`);
+        if (videoCurrentTime) videoCurrentTime.textContent = formatDuration(seekTime);
+      });
 
       function setWorkflowStep(key, animate = true) {
         const content = workflowStages[key]?.[currentLanguage];
@@ -594,7 +741,10 @@
       });
 
       function iconMarkup(name) {
-        return `<svg class="rb-icon" aria-hidden="true" focusable="false"><use href="./assets/icons.svg#icon-${name}"></use></svg>`;
+        const paths = name === 'x'
+          ? '<path d="M18 6 6 18"></path><path d="m6 6 12 12"></path>'
+          : '<line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>';
+        return `<svg class="rb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${paths}</svg>`;
       }
 
       function updateMenuState() {
@@ -626,18 +776,27 @@
         }, 4800);
       }
 
-      const downloadMenuToggle = root.querySelector('[data-download-menu-toggle]');
-      const downloadMenu = document.getElementById('rb-mac-download-menu');
       const downloadMessageKeys = {
         macAppleSilicon: 'downloadUnavailableMacAppleSilicon',
         macIntel: 'downloadUnavailableMacIntel',
         windows: 'downloadUnavailableWindows'
       };
+      const downloadMenuGroups = [...root.querySelectorAll('[data-download-menu-toggle]')]
+        .map((toggle) => ({
+          toggle,
+          menu: document.getElementById(toggle.getAttribute('aria-controls'))
+        }))
+        .filter(({ menu }) => menu);
 
-      function setDownloadMenuOpen(open) {
-        if (!downloadMenuToggle || !downloadMenu) return;
-        downloadMenuToggle.setAttribute('aria-expanded', String(open));
-        downloadMenu.hidden = !open;
+      function setDownloadMenuOpen(group, open) {
+        group.toggle.setAttribute('aria-expanded', String(open));
+        group.menu.hidden = !open;
+      }
+
+      function closeDownloadMenus(except = null) {
+        downloadMenuGroups.forEach((group) => {
+          if (group !== except) setDownloadMenuOpen(group, false);
+        });
       }
 
       function startDownload(variant) {
@@ -649,26 +808,30 @@
         showStatus(translations[currentLanguage][downloadMessageKeys[variant]]);
       }
 
-      downloadMenuToggle?.addEventListener('click', (event) => {
-        event.stopPropagation();
-        setDownloadMenuOpen(downloadMenuToggle.getAttribute('aria-expanded') !== 'true');
+      downloadMenuGroups.forEach((group) => {
+        group.toggle.addEventListener('click', (event) => {
+          event.stopPropagation();
+          const open = group.toggle.getAttribute('aria-expanded') !== 'true';
+          closeDownloadMenus(group);
+          setDownloadMenuOpen(group, open);
+        });
+        group.menu.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
       });
 
-      downloadMenu?.addEventListener('click', (event) => {
-        event.stopPropagation();
-      });
-
-      document.addEventListener('click', () => setDownloadMenuOpen(false));
+      document.addEventListener('click', () => closeDownloadMenus());
       document.addEventListener('keydown', (event) => {
         if (event.key !== 'Escape') return;
-        if (downloadMenuToggle?.getAttribute('aria-expanded') !== 'true') return;
-        setDownloadMenuOpen(false);
-        downloadMenuToggle?.focus();
+        const openGroup = downloadMenuGroups.find(({ toggle }) => toggle.getAttribute('aria-expanded') === 'true');
+        if (!openGroup) return;
+        setDownloadMenuOpen(openGroup, false);
+        openGroup.toggle.focus();
       });
 
       root.querySelectorAll('[data-download-variant]').forEach((button) => {
         button.addEventListener('click', () => {
-          setDownloadMenuOpen(false);
+          closeDownloadMenus();
           startDownload(button.dataset.downloadVariant);
         });
       });
@@ -778,6 +941,12 @@
       root.querySelectorAll('[data-lang-button]').forEach((button) => {
         button.addEventListener('click', () => applyLanguage(button.dataset.langButton));
       });
+
+      const syncVideoMotion = () => {
+        root.querySelectorAll('.rb-hero-video, .rb-usecase-video').forEach(syncVideoPlayback);
+      };
+      syncVideoMotion();
+      reducedMotionQuery.addEventListener?.('change', syncVideoMotion);
 
       const queryLanguage = new URLSearchParams(window.location.search).get('lang');
       const hasQueryLanguage = queryLanguage === 'zh' || queryLanguage === 'en';

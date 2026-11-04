@@ -27,7 +27,10 @@ $runtimeFiles = @(
 )
 
 $runtimeDirectories = @(
-    "assets",
+    "assets"
+)
+
+$optionalRuntimeDirectories = @(
     "deploy"
 )
 
@@ -68,6 +71,13 @@ foreach ($file in $runtimeFiles) {
 
 foreach ($directory in $runtimeDirectories) {
     Copy-Item -LiteralPath (Join-Path $siteRoot $directory) -Destination $stageRoot -Recurse
+}
+
+foreach ($directory in $optionalRuntimeDirectories) {
+    $sourceDirectory = Join-Path $siteRoot $directory
+    if (Test-Path -LiteralPath $sourceDirectory -PathType Container) {
+        Copy-Item -LiteralPath $sourceDirectory -Destination $stageRoot -Recurse
+    }
 }
 
 Compress-Archive -Path (Join-Path $stageRoot "*") -DestinationPath $archivePath -CompressionLevel Optimal
